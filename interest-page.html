@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.Eventease</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Abhaya+Libre:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Navbar Section -->
+      <div class="navbar">
+        <div class="logo">.Eventease</div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="icons">
+            <a onclick="window.location.href='createevent.html';">
+              <i class="fas fa-plus-circle"></i> Create Event
+            </a>
+            <a href="#"> <i class="fas fa-ticket-alt"></i> Tickets </a>
+            <a href="#"> <i class="fas fa-file-alt"></i> Draft </a>
+            <a href="#" onclick="window.location.href='profile-info.html';"> <i class="fas fa-user-circle"></i> Profile </a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero Section Container -->
+      <div class="hero-gallery-container">
+        <!-- Hero Content -->
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1>
+              Welcome to Eventease: Your Gateway to the Hottest Events in USU!
+            </h1>
+            <p>
+              Level up your day with epic events, competitions, and
+              seminars—find it, book it, live it. One click, all vibes. Snag
+              your tickets now and flex the moments that matter! 👇🎟
+            </p>
+          </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-container">
+          <div class="photo-card">
+            <img src="asset/img/feb.jpg" alt="Faculty of Economics Building" />
+          </div>
+          <div class="photo-card">
+            <img src="asset/img/gelanggang.jpg" alt="USU Sports Center" />
+          </div>
+          <div class="photo-card">
+            <img src="asset/img/GP.jpg" alt="Main Building" />
+          </div>
+          <div class="photo-card">
+            <img
+              src="asset/img/Perpustakaan Universitas Sumatera Utara.jpg"
+              alt="USU Library"
+            />
+          </div>
+          <div class="photo-card">
+            <img src="asset/img/PKKMB USU.jpg" alt="Student Orientation" />
+          </div>
+          <div class="photo-card">
+            <img
+              src="asset/img/Universitas Sumatera Utara.jpg"
+              alt="USU Campus"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="asset/img/Daftar Besaran UKT USU 2024 Program S1-D4, Maba Wajib Catat!.jpg"
+              alt="Tuition Info"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Event Section -->
+      <section class="search">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="search-container">
+              <div class="search-bar">
+                <form class="search-form">
+                  <div class="search-group mb-3">
+                    <label for="eventSearch" class="search-label"
+                      >Search Event</label
+                    >
+                    <input
+                      id="eventSearch"
+                      type="text"
+                      class="search-input"
+                      placeholder="Event Name"
+                    />
+                  </div>
+
+                  <div class="search-group mb-3">
+                    <label for="placeInput" class="search-label">Place</label>
+                    <input
+                      id="placeInput"
+                      type="text"
+                      class="search-input"
+                      placeholder="Enter location"
+                    />
+                  </div>
+
+                  <div class="search-group mb-3">
+                    <label for="timeSelect" class="search-label">Time</label>
+                    <select id="timeSelect" class="search-select">
+                      <option value="any">Any date</option>
+                      <option value="today">Today</option>
+                      <option value="tomorrow">Tomorrow</option>
+                      <option value="this-week">This week</option>
+                      <option value="this-month">This month</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="filter-container">
+          <h2 class="filter-title">Filters</h2>
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/4">
+              <h3 class="text-lg font-semibold mb-4">Category</h3>
+              <div class="category-list">
+                <div class="category-item">
+                  <input type="checkbox" id="music" class="category-checkbox" />
+                  <label for="music" class="category-label">Music</label>
+                </div>
+                <div class="category-item">
+                  <input type="checkbox" id="art" class="category-checkbox" />
+                  <label for="art" class="category-label">Art & Culture</label>
+                </div>
+                <div class="category-item">
+                  <input type="checkbox" id="food" class="category-checkbox" />
+                  <label for="food" class="category-label"
+                    >Food & Beverage</label
+                  >
+                </div>
+                <div class="category-item">
+                  <input
+                    type="checkbox"
+                    id="sports"
+                    class="category-checkbox"
+                  />
+                  <label for="sports" class="category-label">Sports</label>
+                </div>
+                <div class="category-item">
+                  <input
+                    type="checkbox"
+                    id="entertainment"
+                    class="category-checkbox"
+                  />
+                  <label for="entertainment" class="category-label"
+                    >Entertainment</label
+                  >
+                </div>
+                <div class="category-item">
+                  <input
+                    type="checkbox"
+                    id="technology"
+                    class="category-checkbox"
+                  />
+                  <label for="technology" class="category-label"
+                    >Technology</label
+                  >
+                </div>
+                <div class="category-item">
+                  <input
+                    type="checkbox"
+                    id="education"
+                    class="category-checkbox"
+                  />
+                  <label for="education" class="category-label"
+                    >Education & Learning</label
+                  >
+                </div>
+                <div class="category-item">
+                  <input
+                    type="checkbox"
+                    id="others"
+                    class="category-checkbox"
+                  />
+                  <label for="others" class="category-label">Others</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-3/4">
+              <div class="events-grid">
+                <div class="event-card">
+                  <img
+                    src="asset/img/img16.png"
+                    alt="Memahami Ekonomi Tersembunyi"
+                  />
+                  <div class="event-details">
+                    <div class="event-date">OCT 1</div>
+                    <div class="event-title">Memahami Ekonomi Tersembunyi</div>
+                    <div class="event-location">DLCB USU</div>
+                    <div class="event-time">01:30 PM - 03:30 PM</div>
+                    <div class="event-price">IDR 0K</div>
+                    <div class="event-unavail">Tickets Unavailable</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

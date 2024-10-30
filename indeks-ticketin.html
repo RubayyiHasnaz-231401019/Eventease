@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.Eventease</title>
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="css/indeks-ticketin.css" />
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Abhaya+Libre:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">.Eventease</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="/indeks-create.html"><i aria-hidden="true"></i>Create Event</a>
+            <a href="#"><i class="fas fa-ticket-alt"></i> Tickets</a>
+            <a href="#"><i class="fas fa-file-alt"></i>Draft</a>
+            <a href="profile-info.html"><i class="fas fa-user-circle"></i> Profile</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="title">Create a New Event</div>
+        <div class="progress-bar">
+            <div class="step">
+                <div class="step-circle active"></div>
+                <div class="step-label">Create</div>
+            </div>
+            <div class="connector"></div> <!-- Garis penghubung -->
+            <div class="step">
+                <div class="step-circle active"></div>
+                <div class="step-label">Banner</div>
+            </div>
+            <div class="connector"></div> <!-- Garis penghubung -->
+            <div class="step">
+                <div class="step-circle active"></div>
+                <div class="step-label active">Ticketing</div>
+            </div>
+            <div class="connector"></div> <!-- Garis penghubung -->
+            <div class="step">
+                <div class="step-circle inactive"></div>
+                <div class="step-label inactive">Review</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container2">
+        <h2>What type of event are you running?</h2>
+        <div class="event-type">
+            <div class="event-option selected" id="ticketed-event">
+                <i class="fas fa-ticket-alt"></i>
+                <p>Ticketed Event</p>
+                <p>My event requires tickets for entry</p>
+            </div>
+            <div class="event-option" id="free-event">
+                <i class="fas fa-tag"></i>
+                <p>Free Event</p>
+                <p>I'm running a free event</p>
+            </div>
+        </div>
+        
+        <!-- Form yang akan ditampilkan/dihilangkan -->
+        <div class="form-group" id="ticket-name-group">
+            <label for="ticket-name">Ticket Name</label>
+            <input type="text" id="ticket-name" placeholder="Ticket Name e.g. General Admission">
+        </div>
+        <div class="form-row" id="ticket-details">
+            <div class="form-group">
+                <label for="total-tickets">Total Tickets for Sale</label>
+                <div class="ticket-quantity">
+                    <button id="decrease">-</button>
+                    <input type="number" id="ticket-quantity" value="1" min="1">
+                    <button id="increase">+</button>
+                </div>
+                <div class="form-group" id="ticket-price-group">
+                    <label for="ticket-price">Ticket Price (per unit)</label>
+                    <div class="price-container">
+                        <span>IDR</span>
+                        <input type="number" id="ticket-price" placeholder="000">
+                </div>
+            </div>                
+        </div>
+        </div>
+    </section>
+    
+
+    <div class="buttons">
+        <a href="indeks-banner.html"> Go back </a>
+        <button onclick="window.location.href='indeks-review.html';"> Save & Continue </button>
+    </div>
+
+
+    <script src="indeks-ticketin.js"></script>
+</body>
+</html>

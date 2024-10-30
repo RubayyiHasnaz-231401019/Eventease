@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.Eventease</title>
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="css/indeks-banner.css" />
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Abhaya+Libre:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">.Eventease</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icons">
+        <a href="/indeks-create.html"><i aria-hidden="true"></i>Create Event</a>
+        <a href="#"><i class="fas fa-ticket-alt"></i> Tickets</a>
+        <a href="#"><i class="fas fa-file-alt"></i>Draft</a>
+        <a href="profile-info.html"
+          ><i class="fas fa-user-circle"></i> Profile</a
+        >
+      </div>
+    </nav>
+
+    <section class="container">
+      <div class="title">Create a New Event</div>
+      <div class="progress-bar">
+        <div class="step">
+          <div class="step-circle active"></div>
+          <div class="step-label">Create</div>
+        </div>
+        <div class="connector"></div>
+        <!-- Garis penghubung -->
+        <div class="step">
+          <div class="step-circle active"></div>
+          <div class="step-label">Banner</div>
+        </div>
+        <div class="connector"></div>
+        <!-- Garis penghubung -->
+        <div class="step">
+          <div class="step-circle inactive"></div>
+          <div class="step-label inactive">Ticketing</div>
+        </div>
+        <div class="connector"></div>
+        <!-- Garis penghubung -->
+        <div class="step">
+          <div class="step-circle inactive"></div>
+          <div class="step-label inactive">Review</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="upload-container">
+      <div class="upload-container">
+        <h2 class="text-2xl font-medium">Upload Image</h2>
+        <div class="upload-box" id="upload-box">
+          <img
+            id="preview"
+            src="https://placehold.co/100x100"
+            alt="Placeholder image icon representing image upload"
+          />
+        </div>
+        <div class="file-input">
+          <label for="file-upload">Choose File</label>
+          <input
+            id="file-upload"
+            type="file"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+          <span id="file-name">No file chosen</span>
+        </div>
+        <div class="file-formats">Valid file formats: JPG, GIF, PNG.</div>
+      </div>
+    </section>
+
+    <div class="buttons">
+      <a href="indeks-create.html"> Go back </a>
+      <button onclick="window.location.href='indeks-ticketin.html';">
+        Save & Continue
+      </button>
+    </div>
+
+    <script src="indeks-banner.js"></script>
+  </body>
+</html>

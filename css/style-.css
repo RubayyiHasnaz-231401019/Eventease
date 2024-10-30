@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abhaya Libre ExtraBold, serif';
+}
+:root {
+    --background-color : #0f1017;
+    --white-color: #FFFFFF;
+}
+body {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    height: 625px;
+    width: 825px;
+    background-image: url(images/background.png);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(46, 33, 33, 0.1);
+}
+.left-side img {
+    padding-top: 24px;
+    margin-left: 45px;
+    width: 50%;
+}
+.left-side {
+    color: #fff;
+}
+.left-side h1 {
+    display: block;
+    transform-origin: left;
+    transform: scaleX(1.1);
+    font-size: 43px;
+    color: var(--white-color);
+    margin-left: 42px;
+    margin-top: 45px;
+    font-weight: 555;
+}
+.left-side h2 {
+    display: block;
+    transform-origin: left;
+    transform: scaleX(1.1);
+    font-size: 43px;
+    color: var(--white-color);
+    margin-left: 42px;
+    margin-top: 9px;
+    font-weight: 555;
+}
+.left-side p {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 42px;
+    margin-top: 48px;
+    font-size: 1em;
+}
+.right-side {
+    background-color: var(--white-color);
+    width: 70%;
+    margin-left: 60px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+.right-side h2 {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1.72em;
+    color: #2D2C3C;
+    font-family: 'Poppins', sans-serif;
+}
+.line-or {
+    margin-top: 29px;
+    justify-content: center;
+    display: flex;
+}
+.line-or span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #a3a3a3;
+}
+.line-or hr {
+    border: none;
+    border: 1px solid #e7e5e5;
+    width: 37.8%;
+    margin: 10px 10px; 
+}
+.button-container {
+    margin-top: 27px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 27px; 
+}
+.button-container a {
+    font-family: 'Poppins';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #2D2C3C;
+    background-color: var(--white-color);
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+.button-container a:hover {
+    background-color: #f8f8f8;
+}
+.button-container a img {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px;
+}
+.input {
+    margin-top: 30px;
+    margin-left: 42px;
+}
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group label {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    font-size: 0.75em;
+    margin-bottom: 3px;
+    color: #636363;
+}
+.input-group input {
+    width: 91.5%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: inherit;
+    color: #2D2C3C; 
+    padding-left: 6px;
+}
+input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #acacac;
+    padding-left: 10px;
+    font-size: 11px; 
+    font-weight: 200; 
+    opacity: 0.8; 
+}
+.label-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    margin-bottom: 5px; 
+}
+.label-container label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75em;
+    color: #636363;
+}
+.label-container .forgot-password {
+    font-size: 0.65em;
+    color: #888;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    color: #888;
+    text-decoration: underline; 
+}
+.forgot-password {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-right: 60px;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #888;
+    text-decoration: none;
+    text-align: right;
+}
+.password-container {
+    position: relative;
+    width: 100%;
+}
+.input-password {
+    width: 100%;
+    padding-right: 40px; /* Memberi ruang untuk ikon di sisi kanan */
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px; /* Ukuran ikon */
+    color: #a3a3a3; /* Warna ikon */
+}
+.toggle-password i {
+    margin-right: 40px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.create-button, .login-button {
+    background: linear-gradient(to right, #BF266F, #591234);
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    width: 430px;
+    height: 43px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+}
+.back-button {
+    background: rgba(255, 168, 210, 1);
+    color: #2B293D;
+    border: none;
+    outline: none;
+    width: 115px;
+    height: 43px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+}
+.create-account, .login-account {
+    text-align: center;
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    font-size: 0.7em;
+    color: #636363;
+}
+.create-account a,
+.login-account a {
+    letter-spacing: 0.3px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(191, 38, 111, 1);
+    text-decoration: none;
+}
+.create-account a:hover,
+.login-account a:hover {
+    color: #BF266F; /* Ganti warna saat hover */
+    text-decoration: underline; /* Beri garis bawah */
+}

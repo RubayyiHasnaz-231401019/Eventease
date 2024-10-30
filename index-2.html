@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.Eventease</title>
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Abhaya+Libre:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Preloader -->
+      <div id="preloader-wrapper">
+        <div class="loading-container">
+          <div class="loading-text">
+            <span>.</span>
+            <span>E</span>
+            <span>V</span>
+            <span>E</span>
+            <span>N</span>
+            <span>T</span>
+            <span>E</span>
+            <span>A</span>
+            <span>S</span>
+            <span>E</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar Section -->
+      <div class="navbar">
+        <div class="logo">.Eventease</div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="icons">
+            <a onclick="window.location.href='createevent.html';"
+              ><i aria-hidden="true"></i>Create Event</a
+            >
+            <a href="#"><i class="fas fa-ticket-alt"></i> Tickets</a>
+            <a href="#"><i class="fas fa-file-alt"></i>Draft</a>
+            <a href="#" onclick="window.location.href='profile-info.html';"
+              ><i class="fas fa-user-circle"></i> Profile</a
+            >
+            <svg
+              viewBox="-5 -5 110 110"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"
+              />
+            </svg>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero Section Container -->
+      <div class="hero-gallery-container">
+        <!-- Hero Content -->
+        <div class="hero-section" id="home">
+          <div class="hero-content">
+            <h1>
+              Welcome to Eventease: Your Gateway to the Hottest Events in USU!
+            </h1>
+            <p>
+              Level up your day with epic events, competitions, and
+              seminars—find it, book it, live it. One click, all vibes. Snag
+              your tickets now and flex the moments that matter! 👇🎟
+            </p>
+          </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-container">
+          <div class="photo-card">
+            <img src="asset/img/feb.jpg" alt="Night event 4" />
+          </div>
+          <div class="photo-card">
+            <img src="asset/img/gelanggang.jpg" alt="Night event 5" />
+          </div>
+          <div class="photo-card">
+            <img src="asset/img/GP.jpg" alt="Night event 6" />
+          </div>
+          <div class="photo-card">
+            <img
+              src="asset/img/Perpustakaan Universitas Sumatera Utara.jpg"
+              alt="Night event 7"
+            />
+          </div>
+          <div class="photo-card">
+            <img src="asset/img/PKKMB USU.jpg" alt="Night event 8" />
+          </div>
+          <div class="photo-card">
+            <img
+              src="asset/img/Universitas Sumatera Utara.jpg"
+              alt="Night event 9"
+            />
+          </div>
+          <div class="photo-card">
+            <img
+              src="asset/img/Daftar Besaran UKT USU 2024 Program S1-D4, Maba Wajib Catat!.jpg"
+              alt="Night event 10"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Event Section -->
+      <section class="search">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="search-container">
+              <div class="search-bar">
+                <form class="search-form">
+                  <div class="search-group mb-3">
+                    <label for="eventSearch" class="search-label"
+                      >Search Event</label
+                    >
+                    <input
+                      id="eventSearch"
+                      type="text"
+                      class="search-input"
+                      placeholder="Event Name"
+                      value="Event Name"
+                    />
+                  </div>
+
+                  <div class="search-group mb-3">
+                    <label for="placeInput" class="search-label">Place</label>
+                    <input
+                      id="placeInput"
+                      type="text"
+                      class="search-input"
+                      placeholder="Enter location"
+                      value="Enter Location"
+                    />
+                  </div>
+
+                  <div class="search-group mb-3">
+                    <label for="timeSelect" class="search-label">Time</label>
+                    <select id="timeSelect" class="search-select">
+                      <option value="any">Any date</option>
+                      <option value="today">Today</option>
+                      <option value="tomorrow">Tomorrow</option>
+                      <option value="this-week">This week</option>
+                      <option value="this-month">This month</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scroll Prompt -->
+      <div class="scroll-container">
+        <div>Scroll to explore</div>
+        <div class="scroll-icon">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Events in USU -->
+    <div class="container">
+      <section class="popular-events-section" id="events">
+        <h2 class="section-title">Popular Events in USU</h2>
+        <div class="filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Today</button>
+          <button class="filter-btn">Tomorrow</button>
+          <button class="filter-btn">This Weekend</button>
+          <button class="filter-btn">Free</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="carousel-container">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <!-- Event cards for slide 1 -->
+        <div class="event-card">
+          <img src="asset/img/img1.png" alt="Event poster for MEDAN Digifest" />
+          <div class="event-details">
+            <div class="event-date">AUG 16-18</div>
+            <div class="event-title">MEDAN Digifest</div>
+            <div class="event-location">Pancasila Building</div>
+            <div class="event-time">00:00 AM - 00:00 PM</div>
+            <div class="event-price">IDR 7,7K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <img
+            src="asset/img/img2.png"
+            alt="Event poster for JUNGFOOD EX-FEST"
+          />
+          <div class="event-details">
+            <div class="event-date">OCT 21</div>
+            <div class="event-title">JUNGFOOD EX-FEST</div>
+            <div class="event-location">In front of Soertaman Hall</div>
+            <div class="event-time">08:00 AM - 03:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <img
+            src="asset/img/img3.png"
+            alt="Event poster for USU CAREER DAYS"
+          />
+          <div class="event-details">
+            <div class="event-date">OCT 15-16</div>
+            <div class="event-title">USU CAREER DAYS</div>
+            <div class="event-location">USU Student Center</div>
+            <div class="event-time">09:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <img
+            src="asset/img/img4.png"
+            alt="Event poster for AIESEC FUTURE LEADERS"
+          />
+          <div class="event-details">
+            <div class="event-date">OCT 26 - JAN 18</div>
+            <div class="event-title">AIESEC FUTURE LEADERS</div>
+            <div class="event-location">Online & Offline</div>
+            <div class="event-time">09:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 185K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <img
+            src="asset/img/img5.png"
+            alt="Event poster for Market Preneur 2024"
+          />
+          <div class="event-details">
+            <div class="event-date">NOV 6-8</div>
+            <div class="event-title">Market Preneur</div>
+            <div class="event-location">Parking Area of FEB</div>
+            <div class="event-time">09:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+        <div
+          class="event-card"
+          onclick="window.location.href='indeks-pandi.html';"
+        >
+          <img
+            src="asset/img/img6.png"
+            alt="Event poster for .id FEST Roadshow"
+          />
+          <div class="event-details">
+            <div class="event-date">OCT 9-10</div>
+            <div class="event-title">.id FEST Roadshow</div>
+            <div class="event-location">Faculty Economics & Business</div>
+            <div class="event-time">09:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <img src="asset/img/img7.png" alt="Event poster for Ceria Budaya" />
+          <div class="event-details">
+            <div class="event-date">OCT 7</div>
+            <div class="event-title">Ceria Budaya</div>
+            <div class="event-location">FISIP</div>
+            <div class="event-time">10:00 AM - END</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <img src="asset/img/img8.png" alt="Event poster for Guest Lecture" />
+          <div class="event-details">
+            <div class="event-date">OCT 16</div>
+            <div class="event-title">Guest Lecture</div>
+            <div class="event-location">FMIPA</div>
+            <div class="event-time">10:00 AM - 12:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <!-- Event cards for slide 2 -->
+        <!-- Repeat the event cards with different event details for the second set of 8 events -->
+        <!-- Replace the images and details with other events -->
+
+        <!-- Example placeholder card for the second slide -->
+        <div class="event-card">
+          <img src="asset/img/img9.png" alt="" />
+          <div class="event-details">
+            <div class="event-date">OCT 12</div>
+            <div class="event-title">Blood Donation</div>
+            <div class="event-location">Room B.2.3, Building B, FP</div>
+            <div class="event-time">09:00 AM - 01:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img10.png" alt="" />
+          <div class="event-details">
+            <div class="event-date">OCT 26-27</div>
+            <div class="event-title">AOTAKE MATSURI</div>
+            <div class="event-location">Faculty of Cultural Science</div>
+            <div class="event-time">08:00 AM - 03:00 PM</div>
+            <div class="event-price">IDR 0K-150K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img11.png" alt="" />
+          <div class="event-details">
+            <div class="event-date">SEP 20-21</div>
+            <div class="event-title">CAREER HALLWAY 3.0</div>
+            <div class="event-location">Faculty of Medicine</div>
+            <div class="event-time">09:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 20K-45K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img12.png" alt="t" />
+          <div class="event-details">
+            <div class="event-date">SEP 30-OCT 4</div>
+            <div class="event-title">BOOK FAIR</div>
+            <div class="event-location">Pancasila Building</div>
+            <div class="event-time">08:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img13.png" alt="" />
+          <div class="event-details">
+            <div class="event-date">DEC 1</div>
+            <div class="event-title">THE 42ND IMSI’S ANNIVERSARY</div>
+            <div class="event-location">Faculty of Cultural Science</div>
+            <div class="event-time">09:00 AM - 05:00 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-avail">Tickets Available</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img14.png" alt="" />
+          <div class="event-details">
+            <div class="event-date">SEP 22</div>
+            <div class="event-title">FUN Climbing & Rappeling</div>
+            <div class="event-location">Kompas USU Secretariat</div>
+            <div class="event-time">09:00 AM - 04:00 PM</div>
+            <div class="event-price">IDR 25K-50K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img15.png" alt="" />
+          <div class="event-details">
+            <div class="event-date">SEP 22</div>
+            <div class="event-title">sisternet goes to campus</div>
+            <div class="event-location">Auditorium of FKM USU</div>
+            <div class="event-time">10:00 AM - 12.00 AM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-unavail">Tickets Unavailable</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="asset/img/img16.png" />
+          <div class="event-details">
+            <div class="event-date">OCT 1</div>
+            <div class="event-title">Memahami Ekonomi Tersembunyi</div>
+            <div class="event-location">DLCB USU</div>
+            <div class="event-time">01:30 PM - 03:30 PM</div>
+            <div class="event-price">IDR 0K</div>
+            <div class="event-unavail">Tickets Unvailable</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <span class="carousel-control left" onclick="prevSlide()">&#10094;</span>
+      <span class="carousel-control right" onclick="nextSlide()">&#10095;</span>
+    </div>
+
+    <!-- Event specially currated -->
+    <div class="container py-5">
+      <h1 class="text-center mb-4">Events Specially Curated for You!</h1>
+      <p class="text-center mb-5">
+        Get event suggestions tailored to your interests! Don't let your
+        favorite events slip away.
+      </p>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <a
+          href="#"
+          class="btn btn-primary"
+          onclick="window.location.href='interest-page.html';"
+          >Get Started</a
+        >
+      </div>
+    </div>
+
+    <!-- Partnership -->
+    <div class="partnership" id="about">
+      <h1 class="text-center mb-4">
+        Eventease: Make it Easy by Providing Broad Access
+      </h1>
+      <p class="text-center mb-5">
+        Wanna level up your event? Eventease is the move! Drop those paper tix
+        and embrace the digital vibe. Find it, book it, live it—all with one
+        click. It's safe, it's swift, it's lit.
+      </p>
+      <div class="d-flex justify-content-center">
+        <img
+          src="asset/img/Destination.png"
+          alt="Partnership Handshake"
+          class="img-fluid mb-4"
+          style="max-width: 500px"
+        />
+      </div>
+      <p class="text-center mb-5">
+        Eventease make it easy by providing broad access for users to buy and
+        sell tickets to all kinds of exciting events.
+      </p>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+
+    <!-- New Event -->
+    <div class="container py-5">
+      <h1 class="text-center mb-4">Create a new event!</h1>
+      <p class="text-center mb-5">
+        Sell tickets for your own events and share unforgettable moments with
+        others!
+      </p>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <a
+          href="#"
+          class="btn btn-primary"
+          onclick="window.location.href='createevent.html';"
+          >Get Started</a
+        >
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait for initial load
+        setTimeout(() => {
+          // Calculate total animation duration (2.4s) plus the last letter delay (1s)
+          const animationDuration = 700; // 2.4s in milliseconds
+          const lastLetterDelay = 700; // 1s in milliseconds
+          const totalDuration = animationDuration + lastLetterDelay;
+
+          // Wait for one complete animation cycle
+          setTimeout(() => {
+            // Hide preloader
+            const preloader = document.getElementById("preloader-wrapper");
+            preloader.classList.add("hide-preloader");
+
+            // Show main content
+            const mainContent = document.getElementById("main-content");
+            mainContent.classList.add("show-content");
+
+            // Remove preloader from DOM after transition
+            setTimeout(() => {
+              preloader.style.display = "none";
+            }, 700); // Wait for transition to complete (0.5s)
+          }, totalDuration);
+        }, 700); // Initial delay to ensure everything is loaded
+      });
+    </script>
+
+    <script>
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const nav = document.querySelector("nav");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+
+      function showSlide(n) {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentSlide - 1);
+      }
+    </script>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

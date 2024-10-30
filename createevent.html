@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Event - Eventease</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <header class="bg-black text-white p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-pink-600">.Eventease</div>
+        <nav class="space-x-4">
+            <a href="#" class="hover:text-pink-600">Home</a>
+            <a href="#" class="hover:text-pink-600">Events</a>
+            <a href="#" class="hover:text-pink-600">About</a>
+            <a href="#" class="hover:text-pink-600">Contact</a>
+        </nav>
+        <div class="space-x-4 flex items-center">
+            <a href="#" class="hover:text-pink-600" onclick="window.location.href='createevent.html';">Create Event</a>
+            <a href="#" class="hover:text-pink-600"><i class="fas fa-ticket-alt"></i> Tickets</a>
+            <a href="#" class="hover:text-pink-600"><i class="fas fa-star"></i> Interested</a>
+            <a onclick="window.location.href='profile-info.html';" class="hover:text-pink-600"><i class="fas fa-user-circle"></i> Profile</a>
+        </div>
+    </header>
+    <main class="max-w-4xl mx-auto p-8 bg-white mt-8 shadow-lg">
+        <h1 class="text-3xl font-bold mb-6">Create a New Event</h1>
+        <div class="flex items-center justify-between mb-8">
+            <div class="flex-1 border-t-2 border-gray-300"></div>
+            <div class="flex items-center justify-between w-full max-w-2xl">
+                <div class="text-center">
+                    <div class="w-4 h-4 bg-gray-800 rounded-full mx-auto"></div>
+                    <p class="text-gray-800 mt-2">Edit</p>
+                </div>
+                <div class="flex-1 border-t-2 border-gray-300"></div>
+                <div class="text-center">
+                    <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto"></div>
+                    <p class="text-gray-800 mt-2">Banner</p>
+                </div>
+                <div class="flex-1 border-t-2 border-gray-300"></div>
+                <div class="text-center">
+                    <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto"></div>
+                    <p class="text-gray-800 mt-2">Ticketing</p>
+                </div>
+                <div class="flex-1 border-t-2 border-gray-300"></div>
+                <div class="text-center">
+                    <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto"></div>
+                    <p class="text-gray-800 mt-2">Review</p>
+                </div>
+            </div>
+            <div class="flex-1 border-t-2 border-gray-300"></div>
+        </div>
+
+        <form>
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Date & Time</h2>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2">Event Type <span class="text-red-500">*</span>
+                        <div class="flex items-center space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="event-type" class="mr-2" id="single-event" onclick="toggleDateInput()"> Single Event
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="event-type" class="mr-2" id="recurring-event" onclick="toggleDateInput()"> Recurring Event
+                            </label>
+                        </div>
+                    </label>
+                </div>
+            
+                <div class="flex space-x-4 mb-4">
+                    <div class="flex-1">
+                        <label class="block text-gray-700 font-bold mb-2" for="start-date">Start Date <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="start-date" placeholder="DD/MM/YY" data-input>
+                            <button class="absolute right-2 top-2 text-gray-400" id="start-date-btn" type="button">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-gray-700 font-bold mb-2" for="start-time">Start Time <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="start-time" placeholder="12:00 AM">
+                            <i class="fas fa-clock absolute right-2 top-2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-gray-700 font-bold mb-2" for="end-time">End Time<span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="end-time" placeholder="12:00 AM">
+                            <i class="fas fa-clock absolute right-2 top-2 text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flex space-x-4 mb-4" id="end-date-section" style="display: none;">
+                    <div class="flex-1">
+                        <label class="block text-gray-700 font-bold mb-2" for="end-date">End Date<span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="end-date" placeholder="DD/MM/YY" data-input>
+                            <button class="absolute right-2 top-2 text-gray-400" id="end-date-btn" type="button">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-gray-700 font-bold mb-2" for="end-start-time">Start Time<span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="end-start-time" placeholder="12:00 AM">
+                            <i class="fas fa-clock absolute right-2 top-2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-gray-700 font-bold mb-2" for="end-end-time">End Time<span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="end-end-time" placeholder="12:00 AM">
+                            <i class="fas fa-clock absolute right-2 top-2 text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Location</h2>
+                <select class="w-full p-2 border border-gray-300 rounded text-black" id="event-location" onchange="toggleInputFields()">
+                    <option value="">Please select one</option>
+                    <option value="offline">Offline</option>
+                    <option value="online">Online</option>
+                </select>
+            </section>
+            
+            
+    <div id="address-input" style="display: none;">
+        <label for="address" class="block mt-2">Masukkan alamat:</label>
+        <input type="text" id="address" class="w-full p-2 border border-gray-300 rounded" placeholder="Contoh: Jl. Contoh No. 123">
+        
+        <label for="google-maps-link" class="block mt-2">Masukkan link GMaps:</label>
+        <input type="text" id="google-maps-link" class="w-full p-2 border border-gray-300 rounded" placeholder="Contoh: https://goo.gl/maps/example">
+    </div>
+
+    <div id="online-input" style="display: none;">
+        <label for="online-platform" class="block mt-2">Masukkan link platform online yang digunakan:</label>
+        <input type="text" id="online-platform" class="w-full p-2 border border-gray-300 rounded" placeholder="Contoh: https://platform.example.com">
+    </div>
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Additional Information</h2>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="event-description">Event Description <span class="text-red-500">*</span></label>
+                        <textarea class="w-full p-2 border border-gray-300 rounded" id="event-description" rows="5" placeholder="Describe what's special about your event & other important details."></textarea>
+                    </div>
+                </section>
+            
+                <div class="flex justify-end">
+                    <button class="text-white py-2 px-4 rounded" id="saveButton" style="background: linear-gradient(45deg, #BF266F, #591234);">
+                        Save & Continue
+                    </button>
+                </div>
+                
+                           
+    </div>
+
+        </form>
+    </main>
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <div>
+                <h3 class="font-bold mb-4">Company Info</h3>
+                <ul>
+                    <li><a class="hover:underline" href="#">About Us</a></li>
+                    <li><a class="hover:underline" href="#">Contact Us</a></li>
+                    <li><a class="hover:underline" href="#">Careers</a></li>
+                    <li><a class="hover:underline" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Help & Support</h3>
+                <ul>
+                    <li><a class="hover:underline" href="#">FAQ</a></li>
+                    <li><a class="hover:underline" href="#">Terms of Service</a></li>
+                    <li><a class="hover:underline" href="#">Guides</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Follow Us</h3>
+                <ul>
+                    <li><a class="hover:underline" href="#">Facebook</a></li>
+                    <li><a class="hover:underline" href="#">Twitter</a></li>
+                    <li><a class="hover:underline" href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Contact Us</h3>
+                <p>Email: support@eventease.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="text-center mt-6">
+            <p>&copy; 2024 Eventease. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("saveButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Cegah form untuk submit secara default
+            window.location.href = "banner.html"; 
+        });
+    </script>
+    
+    <script>
+        document.getElementById("saveButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Cegah form untuk submit secara default
+    window.location.href = "banner.html"; });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Inisialisasi flatpickr untuk start-date
+        flatpickr("#start-date", {
+            dateFormat: "d/m/Y", // Format tanggal
+            allowInput: true, // Izinkan input manual
+        });
+    
+        // Inisialisasi flatpickr untuk end-date
+        flatpickr("#end-date", {
+            dateFormat: "d/m/Y", // Format tanggal
+            allowInput: true, // Izinkan input manual
+        });
+    
+        // Akses pemilih tanggal saat tombol diklik
+        document.getElementById('start-date-btn').onclick = function() {
+            flatpickr("#start-date").open();
+        };
+    
+        document.getElementById('end-date-btn').onclick = function() {
+            flatpickr("#end-date").open();
+        };
+    </script>
+    
+    <script>
+        // Fungsi untuk menampilkan atau menyembunyikan input End Date berdasarkan pilihan event type
+        function toggleDateInput() {
+            var isRecurring = document.getElementById('recurring-event').checked;
+            var endDateSection = document.getElementById('end-date-section');
+    
+            if (isRecurring) {
+                endDateSection.style.display = 'flex';  // Menampilkan end date section
+    
+                // Mengambil nilai start date dan start time
+                var startDate = document.getElementById('start-date').value;
+                var startTime = document.getElementById('start-time').value;
+                var endTime = document.getElementById('end-time').value;
+    
+                // Mengisi end date, start time, dan end time dengan nilai yang sama dari start date/time
+                document.getElementById('end-date').value = startDate;
+                document.getElementById('end-start-time').value = startTime;
+                document.getElementById('end-end-time').value = endTime;
+            } else {
+                endDateSection.style.display = 'none';  // Menyembunyikan end date section
+                document.getElementById('end-date').value = '';  // Reset nilai end date
+                document.getElementById('end-start-time').value = '';  // Reset nilai start time
+                document.getElementById('end-end-time').value = '';  // Reset nilai end time
+            }
+        }
+    </script>
+    <script>
+        function toggleInputFields() {
+            const locationSelect = document.getElementById("event-location");
+            const addressInput = document.getElementById("address-input");
+            const onlineInput = document.getElementById("online-input");
+        
+            if (locationSelect.value === "offline") {
+                addressInput.style.display = "block";
+                onlineInput.style.display = "none";
+            } else if (locationSelect.value === "online") {
+                addressInput.style.display = "none";
+                onlineInput.style.display = "block";
+            } else {
+                addressInput.style.display = "none";
+                onlineInput.style.display = "none";
+            }
+        }
+        </script>
+        
+</body>
+</html>
