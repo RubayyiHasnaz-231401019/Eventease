@@ -1018,7 +1018,7 @@ body {
 
 /* Button styles */
 .btn-primary {
-  background-color: #c71585; /* Warna pink seperti di gambar */
+  background-image: linear-gradient(90deg, #BF266F, #591234);
   border: none;
   border-radius: 25px;
   color: white;
