@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="script.js"></script>
+</head>
+<body> 
+      <div class="modal fade" id="Toggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">SELECT TICKETS</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-between pb-2">
+                <p>Ticket Types</p>
+                <p style="padding: 0px 20px 0px 0px;">Quantity</p>
+              </div>
+              <div class="row jenis-tic">
+                <div class="col-warna col"></div>
+                <div class="nama-tic-col col">
+                    <h3>Standard Ticket</h3>
+                    <h6>Rp 600.000,00</h6>
+                </div>
+                <div class="col-md-4 ms-auto d-flex justify-content-between quantity">
+                    <h3><i class="bi bi-dash-circle" type="button" id="minus" disabled></i></h3>
+                    <h3 type="number" value="1" min="1" max="200" id="quantity">1</h3>
+                    <h3><i class="bi bi-plus-circle" type="button" id="plus"></i></h3>
+                </div>
+              </div>
+
+              <div class="row jenis-tic">
+                <div class="col-warna col"></div>
+                <div class="nama-tic-col col">
+                    <h3>VIP Tickets</h3>
+                    <h6>Rp 900.000,00</h6>
+                </div>
+                <div class="col-md-4 ms-auto d-flex justify-content-between quantity">
+                    <h3><i class="bi bi-dash-circle" type="button" id="minus" disabled></i></h3>
+                    <h3 type="number" value="1" min="1" max="200" id="quantity">1</h3>
+                    <h3><i class="bi bi-plus-circle" type="button" id="plus"></i></h3>
+                </div>
+              </div>
+            </div>
+            <div class="footer-modal" style="align-items: center;" > 
+              <div class="col d-flex justify-content-around">
+                <h3>Quantity : </h3>
+                <h3>Total : </h3>
+            </div>
+            <button class="btn btn-proses" data-bs-target="#Toggle2" data-bs-toggle="modal">
+              <h5>Proceed<i class="bi bi-arrow-right"></i></h5>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Toggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal2">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Attendee Details</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-between pb-2">
+                <p>Event Title</p>
+                <div class="d-flex justify-content-between">
+                  <p><i class="bi bi-calendar4-event"></i></p>
+                  <p style="padding-left: 8px;">Day, Date</p>
+                </div>
+              </div>
+                <div class="row attendee-des">
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label" for="name">Full Name</label>
+                      <input type="text" id="name" class="form-control" placeholder="Enter Attendee's full name">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" class="form-control" placeholder="Enter Anttendee's Email">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="telepon">Phone</label>
+                      <div class="d-flex">
+                        <select id="country-code" name="country-code" class="kode-negara">
+                          <option value="+1">USA (+1)</option>
+                          <option value="+60">MYS (+60)</option>
+                          <option value="+62">IDN (+62)</option>
+                          <option value="+62">SGP (+65)</option>
+                          <option value="+62">DEU (+49)</option>
+                          <option value="+62">IND (+91)</option>
+                          <option value="+62">KOR (+82)</option>
+                          <!-- Add more country codes here -->
+                        </select>
+                        <input type="text" id="name" class="form-control" placeholder="Enter Attendee's Phone Number">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <p style="text-align: center;">I accept all the <span>Terms of Service</span> and have the read <span>Privacy Police</span></p>
+              </div>
+              <div class="footer-modal" style="justify-items: center;"> 
+                <div class="col d-flex">
+                  <h3>Quantity: </h3>
+                  <h3>Total : </h3>
+                </div>
+                <button class="btn btn-proses" data-bs-target="#Toggle3" data-bs-toggle="modal">
+                  <h5>Proceed<i class="bi bi-arrow-right"></i></h5>
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Toggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal2">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                <button class="btn btn-proses" data-bs-target="" data-bs-toggle="modal"><i class="bi bi-arrow-right"></i></button>Attendee Details</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-between pb-2">
+                <p>apaoyy</p>
+                <div class="d-flex justify-content-between">
+                  <p><i class="bi bi-calendar4-event"></i></p>
+                  <p style="padding-left: 8px;">Day, Date</p>
+                </div>
+              </div>
+                <div class="row attendee-des">
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label" for="name">Full Name</label>
+                      <input type="text" id="name" class="form-control" placeholder="Enter Attendee's full name">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" class="form-control" placeholder="Enter Anttendee's Email">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="telepon">Phone</label>
+                      <div class="d-flex">
+                        <select id="country-code" name="country-code" class="kode-negara">
+                          <option value="+1">USA (+1)</option>
+                          <option value="+60">MYS (+60)</option>
+                          <option value="+62">IDN (+62)</option>
+                          <option value="+62">SGP (+65)</option>
+                          <option value="+62">DEU (+49)</option>
+                          <option value="+62">IND (+91)</option>
+                          <option value="+62">KOR (+82)</option>
+                          <!-- Add more country codes here -->
+                        </select>
+                        <input type="text" id="name" class="form-control" placeholder="Enter Attendee's Phone Number">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <p style="text-align: center;">I accept all the <span>Terms of Service</span> and have the read <span>Privacy Police</span></p>
+              </div>
+              <div class="footer-modal" style="justify-items: center;"> 
+                <div class="col d-flex">
+                  <h3>Quantity: </h3>
+                  <h3>Total : </h3>
+                </div>
+                <button class="btn btn-proses" data-bs-target="#Toggle3" data-bs-toggle="modal">
+                  <h5>Proceed<i class="bi bi-arrow-right"></i></h5>
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" data-bs-target="#Toggle1" data-bs-toggle="modal">Beli Tiket</button>
+
+
+    <!-- <script>
+        document.getElementById('backToFirstModal').addEventListener('click', function() {
+            var firstModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
+            var secondModal = bootstrap.Modal.getInstance(document.getElementById('exampleModalToggle2'));
+            secondModal.hide();
+            firstModal.show();
+        });
+    </script> -->
+    <script>
+        const minus = document.getElementById('minus');
+        const plus = document.getElementById('plus');
+        const quantity = document.getElementById('quantity');
+        const minusVip = document.getElementById('minus-vip');
+        const plusVip = document.getElementById('plus-vip');
+        const quantityVip = document.getElementById('quantity-vip');
+        const total = document.getElementById('total');
+        const standardQuantity = document.getElementById('standard-quantity');
+        const vipQuantity = document.getElementById('vip-quantity');
+    
+        minus.addEventListener('click', () => {
+          if (quantity.value > 1) {
+            quantity.value--;
+            updateTotal();
+          }
+        });
+    
+        plus.addEventListener('click', () => {
+          if (quantity.value < 10) {
+            quantity.value++;
+            updateTotal();
+          }
+        });
+    
+        minusVip.addEventListener('click', () => {
+          if (quantityVip.value > 1) {
+            quantityVip.value--;
+            updateTotal();
+          }
+        });
+    
+        plusVip.addEventListener('click', () => {
+          if (quantityVip.value < 10) {
+            quantityVip.value++;
+            updateTotal();
+          }
+        });
+    
+        function updateTotal() {
+          const standardPrice = 10;
+          const vipPrice = 20;
+          const standardQuantityValue = parseInt(quantity.value);
+          const vipQuantityValue = parseInt(quantityVip.value);
+          const totalValue = standardPrice * standardQuantityValue + vipPrice * vipQuantityValue;
+          total.textContent = totalValue;
+          standardQuantity.textContent = standardQuantityValue;
+          vipQuantity.textContent = vipQuantityValue;
+        }
+    
+        updateTotal();
+      </script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
