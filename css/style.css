@@ -606,15 +606,15 @@ body {
 .search-container {
   width: 100%;
   max-width: 730px;
-  position: absolute; /* Menggunakan posisi absolute */
-  top: 75%; /* Sesuaikan dengan posisi yang diinginkan di bagian atas */
+  position: absolute; 
+  top: 75%; 
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
   display: flex;
   justify-content: center;
   padding: 16px;
-  z-index: 10; /* Supaya berada di atas elemen lain */
+  z-index: 10; 
 }
 
 .search-bar {
@@ -622,20 +622,20 @@ body {
   justify-content: center;
   background: white;
   border-radius: 16px;
-  padding: 16px 24px; /* Reduced padding for less distance */
+  padding: 16px 24px; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .search-form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px; /* Reduced gap for less distance */
+  gap: 16px; 
 }
 
 .search-group {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Reduced gap for less distance */
+  gap: 4px; 
 }
 
 .search-label {
@@ -744,12 +744,12 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .search-form {
-    grid-template-columns: 1fr; /* Stacking in small screens */
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .search-bar {
-    padding: 20px 24px; /* Padding adjustments */
+    padding: 20px 24px;
   }
 
   .hero-text h1 {
@@ -778,17 +778,17 @@ body {
   font-size: 28px;
   font-weight: bold;
   color: #ffffff;
-  margin-left: 20px; /* Margin kiri untuk judul */
+  margin-left: 20px; 
   font-family: "Abhaya Libre", sans-serif;
   margin-top: 20px;
 }
 
 .filters {
   display: flex;
-  gap: 12px; /* Jarak antar tombol */
-  margin: 10px 0; /* Margin atas dan bawah untuk filter */
+  gap: 12px; 
+  margin: 10px 0; 
   flex-wrap: wrap;
-  margin-left: 20px; /* Margin kiri untuk filter */
+  margin-left: 20px; 
 }
 
 .filter-btn {
@@ -813,7 +813,7 @@ body {
   border-color: #ee43b2;
 }
 
-/* Animation for click effect */
+/* Animasi Klik */
 .filter-btn:active {
   transform: scale(0.95);
 }
@@ -939,13 +939,13 @@ body {
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .event-card {
-    flex: 0 0 45%; /* 2 cards per row on smaller screens */
+    flex: 0 0 45%; 
   }
 }
 
 @media (max-width: 576px) {
   .event-card {
-    flex: 0 0 100%; /* 1 card per row on small screens */
+    flex: 0 0 100%; 
   }
 }
 
@@ -982,16 +982,15 @@ body {
   background-color: lightcoral;
 }
 
-/* suggestions tailored */
 /* Container styles */
 .container.py-5 {
-  background-color: #f0f0f0; /* Warna background abu-abu muda */
-  min-height: 280px; /* Tinggi minimum container */
+  background-color: #f0f0f0; 
+  min-height: 280px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px; /* Padding atas bawah 60px, kiri kanan 20px */
+  padding: 60px 20px; 
 }
 
 /* Heading styles */
@@ -1033,7 +1032,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #a01168; /* Warna yang sedikit lebih gelap saat hover */
+  background-color: #a01168; 
   transform: translateY(-2px);
 }
 
@@ -1076,7 +1075,7 @@ body {
   margin-right: auto;
 }
 
-/* Optional: Add smooth transition for all elements */
+/* Smooth transition for all elements */
 * {
   transition: all 0.3s ease-in-out;
 }
@@ -1084,7 +1083,7 @@ body {
 /* Partnership Section */
 .partnership {
   text-align: center;
-  padding: 6rem 5%; /* Padding diperbesar */
+  padding: 6rem 5%; 
   background: linear-gradient(to bottom, var(--dark), #2a2a4e);
   display: flex;
   flex-direction: column;
@@ -1093,7 +1092,7 @@ body {
 }
 
 .partnership h1 {
-  margin-bottom: 2rem; /* Margin diperbesar */
+  margin-bottom: 2rem; 
   color: #ffffff;
   font-size: 2.5rem;
   font-weight: 600;
@@ -1101,15 +1100,15 @@ body {
 }
 
 .partnership h2 {
-  margin-bottom: 2rem; /* Margin diperbesar */
+  margin-bottom: 2rem; 
   color: #ffffff;
   font-size: 2.5rem;
   font-weight: 600;
 }
 
 .partnership p {
-  max-width: 800px; /* Max width diperbesar */
-  margin: 0 auto 3rem; /* Margin bottom diperbesar */
+  max-width: 800px; 
+  margin: 0 auto 3rem; 
   opacity: 0.9;
   color: #ffffff;
   font-size: 1.2rem;
@@ -1119,7 +1118,7 @@ body {
 /* Styling untuk container gambar handshake */
 .handshake-container {
   width: 100%;
-  max-width: 300px; /* Ukuran maksimal gambar */
+  max-width: 300px; 
   margin: 2rem auto;
   display: flex;
   justify-content: center;
@@ -1129,11 +1128,11 @@ body {
 .handshake-icon {
   width: 100%;
   height: auto;
-  max-width: 200px; /* Ukuran maksimal icon */
+  max-width: 200px; 
   margin-bottom: 2rem;
 }
 
-/* Efek hover pada gambar (opsional) */
+/* Efek hover pada gambar */
 .handshake-icon:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
@@ -1159,7 +1158,6 @@ body {
   }
 }
 
-/* Animasi untuk handshake (opsional) */
 @keyframes pulse {
   0% {
     transform: scale(1);
