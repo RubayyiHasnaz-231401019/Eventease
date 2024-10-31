@@ -189,7 +189,7 @@ input::placeholder {
 }
 .input-password {
     width: 100%;
-    padding-right: 40px; /* Memberi ruang untuk ikon di sisi kanan */
+    padding-right: 40px; 
 }
 .toggle-password {
     position: absolute;
@@ -197,8 +197,8 @@ input::placeholder {
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-    font-size: 18px; /* Ukuran ikon */
-    color: #a3a3a3; /* Warna ikon */
+    font-size: 18px; 
+    color: #a3a3a3; 
 }
 .toggle-password i {
     margin-right: 40px;
@@ -250,6 +250,6 @@ input::placeholder {
 }
 .create-account a:hover,
 .login-account a:hover {
-    color: #BF266F; /* Ganti warna saat hover */
-    text-decoration: underline; /* Beri garis bawah */
+    color: #BF266F; 
+    text-decoration: underline; 
 }
