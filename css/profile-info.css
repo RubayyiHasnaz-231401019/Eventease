@@ -270,7 +270,7 @@
 }
 .header {
     display: flex;
-    justify-content: center; /* Memusatkan konten secara horizontal */
+    justify-content: center; 
     margin-bottom: 20px;
 }
 .header h2 {
@@ -283,10 +283,10 @@
     position: relative;
     width: 150px;
     height: 150px;
-    margin: 0 auto; /* Menambahkan margin auto untuk center secara horizontal */
+    margin: 0 auto;
     display: flex;
-    justify-content: center; /* Center secara horizontal */
-    align-items: center; /* Center secara vertical */
+    justify-content: center; 
+    align-items: center;
 }
 
 /* Profile picture */
@@ -307,7 +307,7 @@
     object-fit: cover;
 }
 
-/* Camera icon */
+
 .camera-icon {
     position: absolute;
     bottom: 0; /* Mengubah dari 10px ke 0 */
@@ -321,7 +321,7 @@
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transform: translate(0, -10px) translate(-10px, 0); /* Menggeser icon ke posisi yang diinginkan */
+    transform: translate(0, -10px) translate(-10px, 0); 
 }
 
 .camera-icon img {
@@ -367,8 +367,8 @@ input[type="file"] {
 }
 
 .save-button {
-    text-align: center; /* Menambahkan text-align: center untuk menempatkan tombol di tengah */
-    margin-top: 50px; /* Menambahkan margin-top agar ada jarak dengan elemen di atasnya */
+    text-align: center; 
+    margin-top: 50px; 
 }
 
 .save-button button {
@@ -387,7 +387,7 @@ input[type="file"] {
 }
 
 .save-button button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
     text-align: center;
 }
 
