@@ -245,7 +245,7 @@
 
 .progress-bar {
     display: flex;
-    justify-content: center; /* Centering progress bar */
+    justify-content: center;
     align-items: center;
     width: 80%;
     margin: 0 auto;
@@ -260,13 +260,13 @@
 
 .connector {
     width: 100%;
-    height: 2px; /* Tinggi garis */
-    background-color: #4A0D3C; /* Warna garis */
-    align-self: center; /* Memastikan garis berada di tengah */
+    height: 2px;
+    background-color: #4A0D3C;
+    align-self: center;
 }
 
 .step:last-child .connector {
-    display: none; /* Menghilangkan garis setelah langkah terakhir */
+    display: none; 
 }
 
 .step-circle {
@@ -300,14 +300,12 @@
 }
 .upload-container h2 {
     .upload-title {
-        margin-left: 0; /* Remove default margin */
-        margin-bottom: 10px; /* Adjust this value as needed for spacing from the upload box */
-    }
-
+        margin-left: 0;
+        margin-bottom: 10px; 
 }
 .upload-box {
-    width: 200px;  /* Set width to create a square */
-    height: 200px; /* Set height to create a square */
+    width: 200px;  
+    height: 200px; 
     border: 2px dashed #ccc;
     border-radius: 8px;
     display: flex;
@@ -316,16 +314,16 @@
     background-color: #e0e0e0;
     margin-bottom: 20px;
     overflow: hidden;
-    max-width: 100%; /* Allow it to expand up to 100% of the parent */
-    margin: 0 auto; /* Center the upload box */
+    max-width: 100%; 
+    margin: 0 auto; 
     margin-bottom: 20px;
 }
 
 
 .upload-box img {
-    max-width: 100%; /* Keep the image responsive */
-    max-height: 100%; /* Keep the image responsive */
-    display: block; /* Prevent gaps */
+    max-width: 100%;
+    max-height: 100%; 
+    display: block; 
 }
 
 
@@ -361,7 +359,7 @@
     justify-content: space-between;
     width: 80%;
     max-width: 600px;
-    margin: 60px auto 0; /* Tambahkan margin-top sesuai kebutuhan */
+    margin: 60px auto 0; 
 }
 
 .buttons a, .buttons button {
