@@ -318,12 +318,12 @@ body {
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
 
-/* home */
+
 .text-home {
   text-align: left;
-  padding-left: 25px; /* Tetap ada padding kiri */
+  padding-left: 25px; 
   margin-left: 0;
-  margin-top: -180px; /* Mengurangi jarak vertikal dari atas */
+  margin-top: -180px; 
   font-family: "Poppins", sans-serif;
 }
 
@@ -363,9 +363,9 @@ h2 {
 }
 
 .lead {
-  font-size: 15px; /* Atur ukuran font */
-  line-height: 1.5; /* Atur jarak antar baris */
-  color: #ffffff; /* Warna teks */
+  font-size: 15px; 
+  line-height: 1.5; 
+  color: #ffffff; 
   font-weight: lighter;
 }
 
@@ -388,22 +388,22 @@ h2 {
 .event-grid {
   position: absolute;
   right: -5%;
-  top: 65%; /* Mengubah posisi sedikit lebih rendah agar muat dengan baik */
+  top: 65%; 
   transform: translateY(-60%) rotate(-5deg);
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Mengatur grid menjadi 3 kolom */
-  gap: 15px; /* Mengurangi jarak antar gambar */
-  width: 50%; /* Lebar grid agar tidak terlalu lebar */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px; 
+  width: 50%;
   perspective: 1000px;
 }
 
 .event-image {
   width: 100%;
-  height: 180px; /* Mengurangi tinggi gambar agar lebih kecil */
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px; /* Radius lebih kecil untuk proporsi yang lebih halus */
+  border-radius: 12px; 
   transform: rotate(5deg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow lebih ringan */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
   transition: all 0.3s ease;
 }
 
@@ -459,15 +459,15 @@ h2 {
   }
 }
 
-/* Search Button */
+
 .search-container {
   width: 100%;
   max-width: 730px;
-  margin: 20px auto; /* Centering the container */
+  margin: 20px auto; 
   position: relative;
   z-index: 10;
-  display: flex; /* Use flex to center content */
-  justify-content: center; /* Center horizontally */
+  display: flex; 
+  justify-content: center; 
 }
 
 .search-bar {
@@ -475,20 +475,20 @@ h2 {
   justify-content: center;
   background: white;
   border-radius: 16px;
-  padding: 16px 24px; /* Reduced padding for less distance */
+  padding: 16px 24px; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .search-form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px; /* Reduced gap for less distance */
+  gap: 16px; 
 }
 
 .search-group {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Reduced gap for less distance */
+  gap: 4px; 
 }
 
 .search-label {
@@ -593,15 +593,15 @@ h2 {
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .search-form {
-    grid-template-columns: 1fr; /* Stacking in small screens */
+    grid-template-columns: 1fr; 
     gap: 16px;
   }
 
   .search-bar {
-    padding: 20px 24px; /* Padding adjustments */
+    padding: 20px 24px; 
   }
 
   .hero-text h1 {
@@ -613,7 +613,7 @@ h2 {
   }
 }
 
-/* Categories Section */
+
 .categories {
   margin: 60px 0;
   padding: 0 40px;
@@ -692,7 +692,7 @@ h2 {
   color: #130a24;
 }
 
-/* Optional: Add animation for smoother interaction */
+
 @keyframes bounce {
   0%,
   100% {
