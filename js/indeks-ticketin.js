@@ -10,33 +10,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const ticketDetails = document.getElementById('ticket-details');
     const ticketPriceGroup = document.getElementById('ticket-price-group');
 
-    // Fungsi untuk menampilkan form Ticketed Event
+   
     function showTicketedEvent() {
-        ticketNameGroup.style.display = 'block';  // Tampilkan nama tiket
-        ticketDetails.style.display = 'flex';     // Tampilkan semua detail tiket
-        ticketPriceGroup.style.display = 'block'; // Tampilkan harga tiket
+        ticketNameGroup.style.display = 'block';  
+        ticketDetails.style.display = 'flex';     
+        ticketPriceGroup.style.display = 'block'; 
         ticketedEvent.classList.add('selected');
         freeEvent.classList.remove('selected');
     }
 
     // Fungsi untuk menampilkan form Free Event
     function showFreeEvent() {
-        ticketNameGroup.style.display = 'block';  // Tampilkan nama tiket
-        ticketDetails.style.display = 'flex';     // Tetap tampilkan jumlah tiket
-        ticketPriceGroup.style.display = 'none';  // Sembunyikan harga tiket
+        ticketNameGroup.style.display = 'block';  
+        ticketDetails.style.display = 'flex';    
+        ticketPriceGroup.style.display = 'none';  
         freeEvent.classList.add('selected');
         ticketedEvent.classList.remove('selected');
     }
 
-    // Tambahkan event listener untuk kedua opsi
+    
     ticketedEvent.addEventListener('click', showTicketedEvent);
     freeEvent.addEventListener('click', showFreeEvent);
 
-    // Set kondisi awal (default ke Ticketed Event)
+   
     showTicketedEvent();
 });
 
-// Function to save input values to localStorage
+
 function saveInputs() {
     const ticketName = document.getElementById('ticket-name').value;
     const ticketQuantity = document.getElementById('ticket-quantity').value;
