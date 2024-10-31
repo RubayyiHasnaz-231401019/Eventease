@@ -16,12 +16,12 @@
     margin: 20px auto;
 }
 .event-image {
-    max-width: 500px;  /* Batasi lebar maksimal gambar */
-    width: 100%;       /* Gambar akan menyesuaikan dengan ukuran elemen induknya */
-    height: auto;      /* Menjaga rasio asli gambar */
-    display: block;    /* Agar elemen gambar bisa diposisikan dengan margin */
-    margin: 20px auto; /* Memusatkan gambar secara horizontal */
-    border-radius: 10px; /* Opsional: tambahkan border melengkung */
+    max-width: 500px;  
+    width: 100%;       
+    height: auto;    
+    display: block;    
+    margin: 20px auto;
+    border-radius: 10px; 
 }
 
 .content h2 {
@@ -45,12 +45,12 @@
 }
 
 .add-to-calendar a {
-    color: #9B034C; /* Mengubah warna teks menjadi hitam */
-    text-decoration: none; /* Menghilangkan garis bawah */
+    color: #9B034C;
+    text-decoration: none; 
 }
 
 .add-to-calendar a:hover {
-    color: #BF266F;/* Opsional: mengubah warna saat hover */
+    color: #BF266F;
 }
 
 .content .buy-tickets {
@@ -83,11 +83,11 @@
     margin: 5px 0;
 }
 .sectionMap iframe {
-    width: 850px; /* Lebar iframe */
-    height: 300px; /* Tinggi iframe */
-    border: 0; /* Menghapus border */
-    display: block; /* Mengubah elemen menjadi block agar margin auto berfungsi */
-    margin: 0 auto; /* Mengatur margin otomatis untuk menempatkan iframe di tengah */
+    width: 850px; 
+    height: 300px; 
+    border: 0; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .container {
@@ -101,7 +101,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    margin-bottom: 20px; /* Jarak di bawah bagian host */
+    margin-bottom: 20px; 
 }
 .hosted-by img {
     width: 60px;
@@ -155,22 +155,19 @@
     margin-bottom: 20px;
 }
 .event-description p {
-    text-align: justify; /* Menyelaraskan teks rata kanan-kiri */
-    line-height: 1.6;   /* Mengatur tinggi baris untuk keterbacaan */
-    margin: 0 0 15px;   /* Mengatur margin bawah untuk spasi antar paragraf */
+    text-align: justify; 
+    line-height: 1.6;   
+    margin: 0 0 15px;
 }
 
-/* Jika ingin menambahkan style untuk heading */
-
-/* Mengatur tampilan link di paragraf dengan class 'regist' */
 .event-description .regist a {
-    color: white;          /* Warna teks link putih */
-    text-decoration: none; /* Menghilangkan underline */
+    color: white;        
+    text-decoration: none;
 }
 
 /* Mengubah warna saat hover menjadi biru */
 .event-description .regist a:hover {
-    color: #BF266F; /* Mengubah warna menjadi biru saat di-hover */
+    color: #BF266F;
 }
 
 
@@ -185,17 +182,17 @@
 
 .event-cards {
     display: flex;
-    justify-content: space-between; /* Space between the cards */
-    flex-wrap: wrap; /* Allow cards to wrap if the screen is too small */
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 .event-card {
-    width: 30%; /* Set width to 30% for three cards in a row */
+    width: 30%; 
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    margin-bottom: 27px; /* Added margin for vertical spacing */
+    margin-bottom: 27px;
 }
 
 .event-card img {
@@ -216,29 +213,29 @@
 .event-info .title {
     font-size: 1em;
     margin: 10px 0;
-    color: #2D2C3C; /* Warna teks judul */
+    color: #2D2C3C;
     text-align: center;
 }
 
 .event-info .title a {
-    color: black; /* Mengatur warna teks tautan menjadi hitam */
-    text-decoration: none; /* Menghilangkan underline pada tautan */
+    color: black;
+    text-decoration: none; 
 }
 
 .event-info .title a:hover {
-    text-decoration: underline; /* Tambahkan efek saat tautan dihover jika diinginkan */
+    text-decoration: underline;
 }
 
 .event-info .venue {
-    font-size: 0.9em; /* Ukuran font untuk tempat */
-    color: #666; /* Warna abu-abu */
-    margin-bottom: 5px; /* Jarak antara venue dan waktu */
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .event-info .time {
-    font-size: 0.9em; /* Ukuran yang sama dengan venue */
-    color: #666; /* Warna abu-abu */
-    margin-bottom: 10px; /* Jarak sebelum bagian detail */
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 .event-info .details {
@@ -250,23 +247,20 @@
 
 .event-info .details .price {
     font-weight: bold;
-    color: #FFD700; /* Warna kuning */
+    color: #FFD700;
 }
 
 .event-info .details .availability {
     font-weight: bold;
-    transition: color 0.3s; /* Transition effect for color change */
+    transition: color 0.3s;
 }
 
-/* Jika status adalah 'Tickets available' */
 .event-info .details .availability.available {
-    color: #3CB371; /* Warna hijau */
+    color: #3CB371; 
 }
 
-/* Jika status adalah 'Tickets unavailable' */
 .event-info .details .availability.unavailable {
-    color: #555555; /* Warna abu-abu */
-}
+    color: #555555;
 
 
 
