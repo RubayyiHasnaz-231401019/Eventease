@@ -245,7 +245,7 @@
 
 .progress-bar {
     display: flex;
-    justify-content: center; /* Centering progress bar */
+    justify-content: center; 
     align-items: center;
     width: 80%;
     margin: 0 auto;
@@ -260,13 +260,13 @@
 
 .connector {
     width: 100%;
-    height: 2px; /* Tinggi garis */
-    background-color: #4A0D3C; /* Warna garis */
-    align-self: center; /* Memastikan garis berada di tengah */
+    height: 2px;
+    background-color: 
+    align-self: center; 
 }
 
 .step:last-child .connector {
-    display: none; /* Menghilangkan garis setelah langkah terakhir */
+    display: none;
 }
 
 .step-circle {
@@ -296,9 +296,9 @@
 }
 
 .content-wrapper {
-    padding: 0 10px; /* This ensures there is padding on the left and right */
-    max-width: 800px; /* Optional: Limits the width of the form for better readability */
-    margin: 0 auto; /* Center the content-wrapper */
+    padding: 0 10px;
+    max-width: 800px; 
+    margin: 0 auto;
 }
 
 .form-group {
@@ -342,13 +342,13 @@
 
 .date-time-group {
     display: flex;
-    gap: 20px; /* Adjust space between fields */
-    flex-wrap: wrap; /* Allow wrapping if screen is too small */
+    gap: 20px; 
+    flex-wrap: wrap;
 }
 
 .date-time-group .form-group {
-    flex: 1; /* Allow each form group to grow */
-    min-width: 200px; /* Minimum width to prevent too small fields */
+    flex: 1; 
+    min-width: 200px; 
 }
 
 .btn {
@@ -361,16 +361,16 @@
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    margin: 20px auto 0; /* Center the button */
+    margin: 20px auto 0; 
     cursor: pointer;
 }
 
 .buttons {
     display: flex;
-    justify-content: flex-end; /* Ubah dari space-between ke flex-end */
+    justify-content: flex-end;
     width: 80%;
     max-width: 600px;
-    margin: 60px auto 0; /* Tambahkan margin-top sesuai kebutuhan */
+    margin: 60px auto 0;
 }
 
 .buttons button {
@@ -388,14 +388,7 @@
     padding: 20px 0;
 }
 
-/* .form-group {
-    margin-bottom: 20px;
-}
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-} */
+
 .form-group input[type="text"],
 .form-group input[type="file"],
 .form-group select {
