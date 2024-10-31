@@ -509,7 +509,7 @@ body {
   object-fit: cover;
 }
 
-/* Photo Card Positions */
+
 .photo-card:nth-child(1) {
   top: 15%;
   left: 51%;
@@ -741,7 +741,7 @@ body {
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .search-form {
     grid-template-columns: 1fr;
@@ -769,12 +769,11 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Popular Events Section */
 
-/* Filters */
+
 .section-title {
   text-align: left;
-  margin-bottom: 20px; /* Jarak di bawah judul */
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
   color: #ffffff;
@@ -813,7 +812,6 @@ body {
   border-color: #ee43b2;
 }
 
-/* Animasi Klik */
 .filter-btn:active {
   transform: scale(0.95);
 }
@@ -936,7 +934,7 @@ body {
   font-weight: bold;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 992px) {
   .event-card {
     flex: 0 0 45%; 
@@ -1059,7 +1057,6 @@ body {
   }
 }
 
-/* Additional styling for better layout */
 .d-grid {
   display: grid;
   gap: 1rem;
@@ -1075,12 +1072,11 @@ body {
   margin-right: auto;
 }
 
-/* Smooth transition for all elements */
 * {
   transition: all 0.3s ease-in-out;
 }
 
-/* Partnership Section */
+
 .partnership {
   text-align: center;
   padding: 6rem 5%; 
@@ -1115,7 +1111,7 @@ body {
   line-height: 1.6;
 }
 
-/* Styling untuk container gambar handshake */
+
 .handshake-container {
   width: 100%;
   max-width: 300px; 
@@ -1124,7 +1120,7 @@ body {
   justify-content: center;
 }
 
-/* Styling untuk gambar handshake */
+
 .handshake-icon {
   width: 100%;
   height: auto;
@@ -1174,7 +1170,7 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* Create Event Section */
+
 .create-event {
   text-align: center;
   padding: 4rem 5%;
@@ -1192,7 +1188,7 @@ body {
   opacity: 0.8;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .hero-content {
     width: 100%;
