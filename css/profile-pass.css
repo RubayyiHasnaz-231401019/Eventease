@@ -280,13 +280,13 @@
 .form-group label {
     display: inline-block;
     font-weight: bold;
-    width: 150px; /* Lebar konsisten untuk label */
+    width: 150px; 
     text-align: right;
 }
 
 .header {
     display: flex;
-    justify-content: center; /* Memusatkan konten secara horizontal */
+    justify-content: center; 
     margin-bottom: 2px;
 }
 .header h2 {
@@ -329,8 +329,8 @@
 }
 
 .save-button {
-    text-align: center; /* Menambahkan text-align: center untuk menempatkan tombol di tengah */
-    margin-top: 50px; /* Menambahkan margin-top agar ada jarak dengan elemen di atasnya */
+    text-align: center; 
+    margin-top: 50px; 
 }
 
 .save-button button {
@@ -349,7 +349,7 @@
 }
 
 .save-button button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
     text-align: center;
 }
 
