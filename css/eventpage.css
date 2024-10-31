@@ -134,7 +134,7 @@
     color: white;
     border: none;
 }
-/* Styling default tombol "Follow" */
+
 .hosted-by .host-info .buttons .follow {
     background-color: #BF266F;
     color: white;
@@ -142,7 +142,7 @@
     transition: all 0.3s ease;
 }
 
-/* Styling saat menjadi "Unfollow" */
+
 .hosted-by .host-info .buttons .unfollow {
     background-color: white;
     color: #BF266F;
