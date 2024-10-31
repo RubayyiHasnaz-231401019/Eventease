@@ -12,7 +12,7 @@ function toggleDateInput() {
     }
 }
 
-    // Initialize Flatpickr for date inputs
+ 
     document.addEventListener('DOMContentLoaded', function () {
         flatpickr("#start-date", {
             dateFormat: "d/m/Y",
