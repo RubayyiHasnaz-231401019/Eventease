@@ -6,7 +6,7 @@
     <title>.Eventease</title>
 
     <!-- CSS styles -->
-    <link rel="stylesheet" href="history.css" />
+    <link rel="stylesheet" href="profile_pass.css" />
 
     <!-- Font -->
     <link
@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css"/>
 </head>
@@ -45,6 +46,7 @@
           </div>
         </nav>
       </div>
+  
 
     <div class="container">
         <div class="sidebar">
@@ -59,50 +61,23 @@
         </div>
         <div class="content">
             <div class="header">
-                <h2>Order & Sales History</h2>
+                <h2>Change Password</h2>
             </div>
-                <div class="order-item">
-                 <img alt="Placeholder image for Buy Ticket" height="60" src="https://storage.googleapis.com/a1aa/image/ojfzYpTO0axoW6NofSawTrwZJ91cQ3kNY1ciEs3gevfEqvuOB.jpg" width="60"/>
-                 <div class="order-details">
-                  <h3>
-                   Buy Ticket Name
-                  </h3>
-                  <p>
-                   Day and Date
-                  </p>
-                 </div>
-                 <div class="order-price">
-                  <h3>
-                   Ticket Price
-                  </h3>
-                  <p>
-                   Virtual Account
-                  </p>
-                 </div>
+            <div class="form-group">
+                <label for="first-name">Current Password:</label>
+                <input id="first-name" placeholder="Enter current password" type="text"/>
+              </div>
+                  <div class="form-group">
+                    <label for="first-name">New Password:</label>
+                    <input id="first-name" placeholder="Enter new password" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Confirm Password:</label>
+                    <input id="last-name" placeholder="Enter password again" type="text"/>
+                  </div>
+                <div class="save-button">
+                    <button onclick="saveChanges()">Save Changes</button>
                 </div>
-                <div class="order-item">
-                    <img alt="Placeholder image for Buy Ticket" height="60" src="https://storage.googleapis.com/a1aa/image/ojfzYpTO0axoW6NofSawTrwZJ91cQ3kNY1ciEs3gevfEqvuOB.jpg" width="60"/>
-                    <div class="order-details">
-                     <h3>
-                      Sales Ticket Name
-                     </h3>
-                     <p>
-                      Day and Date
-                     </p>
-                    </div>
-                    <div class="order-price">
-                     <h3>
-                      Ticket Price
-                     </h3>
-                     <p>
-                      Virtual Account
-                     </p>
-                    </div>
-                   </div>
-               </div>
-              </body>
-             </html>
-             
             </div>
         </div>
 
@@ -154,29 +129,7 @@
           <div class="copyright">© 2024 — Copyright</div>
         </div>
       </footer>
-  
-    
-        <!-- Script Menu Mobile -->
-        <script>
-            const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-            const nav = document.querySelector("nav");
-      
-            mobileMenuBtn.addEventListener("click", () => {
-              nav.classList.toggle("active");
-            });
-      
-            document.addEventListener("click", (e) => {
-              if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                nav.classList.remove("active");
-              }
-            });
-          </script>
-      
-          <!-- Script Bootstrap -->
-          <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-          ></script>
+        
+    <script src="profile_pass.js"></script>
 </body>
 </html>
