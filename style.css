@@ -94,7 +94,6 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: row;
-    gap: 27px; 
 }
 .button-container a {
     font-family: 'Poppins';
@@ -102,13 +101,12 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 12px;
     padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #2D2C3C;
     background-color: var(--white-color);
-    width: 200px;
+    width: 300px;
     transition: background-color 0.3s ease;
 }
 .button-container a:hover {
@@ -189,7 +187,7 @@ input::placeholder {
 }
 .input-password {
     width: 100%;
-    padding-right: 40px; 
+    padding-right: 40px;
 }
 .toggle-password {
     position: absolute;
@@ -198,10 +196,11 @@ input::placeholder {
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 18px; 
-    color: #a3a3a3; 
+    color: #a3a3a3;
 }
 .toggle-password i {
     margin-right: 40px;
+    cursor: pointer;
 }
 .buttons {
     display: flex;
@@ -250,6 +249,6 @@ input::placeholder {
 }
 .create-account a:hover,
 .login-account a:hover {
-    color: #BF266F; 
+    color: #BF266F;
     text-decoration: underline; 
 }
