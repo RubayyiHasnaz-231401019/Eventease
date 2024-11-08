@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="button-container">
                 <a href="google.php" class="google-button">
                     <img src="images/google.png" alt="Google Logo">
-                    Sign up with Google
+                    Sign in with Google
                 </a>
             </div>
             <div class="line-or">
