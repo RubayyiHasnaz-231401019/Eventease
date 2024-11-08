@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.Eventease</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/events.css" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Abhaya+Libre:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Pre loader -->
+    <div id="preloader-wrapper">
+      <div class="loading-container">
+        <div class="loading-text">
+          <span>.</span>
+          <span>E</span>
+          <span>V</span>
+          <span>E</span>
+          <span>N</span>
+          <span>T</span>
+          <span>E</span>
+          <span>A</span>
+          <span>S</span>
+          <span>E</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+      <div class="logo">.Eventease</div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact & Feedback</a></li>
+        </ul>
+
+        <div class="icons">
+          <a href="createevent.html">Create Event</a>
+          <a href="tickets.html"><i class="fa-solid fa-ticket"></i> Tickets</a>
+          <a href="draft.html"><i class="fa-solid fa-folder"></i> Draft</a>
+          <a href="profilepage.html"
+            ><i class="fa-solid fa-user"></i> Profile</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero Section Container -->
+    <div class="hero-gallery-container">
+      <!-- Hero Content -->
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>.Eventease: Your Gateway to the Hottest Events in USU!</h1>
+          <p>Find it, book it, live it. One click, all vibes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Events in USU -->
+    <div class="popular-container">
+      <section class="popular-events-section">
+        <h2 class="section-title">Popular Events in USU</h2>
+        <div class="filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Today</button>
+          <button class="filter-btn">Tomorrow</button>
+          <button class="filter-btn">This Weekend</button>
+          <button class="filter-btn">Free</button>
+        </div>
+      </section>
+
+      <div class="swiper eventSwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="slide-content">
+              <!-- Row 1 -->
+              <div class="event-row">
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img1.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">MEDAN Digifest</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              AUG <span><br />16-18</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Pancasila Building
+                            </p>
+                            <p class="event-card__time">00:00 AM - 00:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 7,7K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img2.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">JUNGFOOD EX-FEST</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />21</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              In front of Soeratman Hall
+                            </p>
+                            <p class="event-card__time">08:00 AM - 03:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_avail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img3 (2).PNG"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">USU CAREER DAYS</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              AUG <span><br />15-16</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              USU Student Center
+                            </p>
+                            <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_avail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img4.PNG"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">AIESEC FUTURE LEADERS</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />26</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">Online & Offline</p>
+                            <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 185K</span
+                          >
+                          <p class="event-card_avail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="event-row">
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img5.PNG"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">Market Preneur</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              NOV <span><br />6-8</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Parking Area of FEB
+                            </p>
+                            <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img6.JPG"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">.id FEST Roadshow</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />9-10</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">FEB</p>
+                            <p class="event-card__time">00:00 AM - 00:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img7.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">Ceria Budaya</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />7</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">FISIP</p>
+                            <p class="event-card__time">10:00 AM - END</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img8.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">
+                        Targeting metabolism to treat epilepsy
+                      </h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />9</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              4th Floor Hall, FK
+                            </p>
+                            <p class="event-card__time">00:30 PM - 02:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="slide-content">
+              <!-- Row 1 -->
+              <div class="event-row">
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img7.png"
+                    alt=""
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">Blood Donation</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />12</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Room B.2.3, Building B, FB
+                            </p>
+                            <p class="event-card__time">09:00 AM - 01:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 7,7K</span
+                          >
+                          <p class="event-card_avail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img10.png"
+                    alt=""
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">AOTAKE MATSURI</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />26-27</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Faculty of Cultural Science
+                            </p>
+                            <p class="event-card__time">08:00 AM - 03:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR
+                            0K-150K</span
+                          >
+                          <p class="event-card_avail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img11.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">CAREER HALLWAY 3.0</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              SEP <span><br />20-21</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Faculty of Medicine
+                            </p>
+                            <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR
+                            25K-50K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img12.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">BOOK FAIR</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              SEP <span><br />30</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Pancasila Building
+                            </p>
+                            <p class="event-card__time">08:00 AM - 05:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="event-row">
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img13.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">
+                        THE 42ND IMSI’S ANNIVERSARY
+                      </h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              DES <span><br />1</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Faculty of Cultural Science
+                            </p>
+                            <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 7,7K</span
+                          >
+                          <p class="event-card_avail">Tickets Available</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img14.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">
+                        FUN Climbing & Rappeling
+                      </h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              SEP <span><br />22</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Kompas USU Secretariat
+                            </p>
+                            <p class="event-card__time">09:00 AM - 04:00 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR
+                            25K-50K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img15.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">
+                        sisternet goes to campus
+                      </h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              SEP <span><br />2</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">
+                              Auditorium of FKM USU
+                            </p>
+                            <p class="event-card__time">10:00 AM - 12.00 AMM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+
+                <article class="event-card">
+                  <img
+                    class="event-card__image"
+                    src="img/img16.png"
+                    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                    width="1920"
+                    height="2193"
+                  />
+                  <div class="event-card__content">
+                    <div class="event-card__container">
+                      <h2 class="event-card__title">Kuliah Umum</h2>
+                      <div class="event-card__details">
+                        <div class="event-card__info-grid">
+                          <div class="event-card__date-block">
+                            <p class="event-card__date">
+                              OCT <span><br />12</span>
+                            </p>
+                          </div>
+                          <div class="event-card__location-block">
+                            <p class="event-card__location">DLCB USU</p>
+                            <p class="event-card__time">01:30 PM - 03:30 PM</p>
+                          </div>
+                        </div>
+                        <div class="event-card__price-block">
+                          <span class="event-card__price"
+                            ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                          >
+                          <p class="event-card_unavail">Tickets Unavailable</p>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="event-button-nav">
+                      <ul>
+                        <li>
+                          More
+                          <span></span><span></span><span></span><span></span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Free Events -->
+    <div class="popular-container">
+      <section class="popular-events-section">
+        <h2 class="section-title">Free Events in USU</h2>
+        <div class="filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Today</button>
+          <button class="filter-btn">Tomorrow</button>
+          <button class="filter-btn">This Weekend</button>
+          <button class="filter-btn">Free</button>
+        </div>
+      </section>
+
+      <div class="event-row">
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="MEDAN Digifest"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">MEDAN Digifest</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">AUG<br />16-18</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">Pancasila Building</p>
+                    <p class="event-card__time">00:00 AM - 00:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 7,7K</span
+                  >
+                  <p class="event-card_unavail">Tickets Unavailable</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="JUNGFOOD EX-FEST"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">JUNGFOOD EX-FEST</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">OCT<br />21</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">
+                      In front of Soeratman Hall
+                    </p>
+                    <p class="event-card__time">08:00 AM - 03:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                  >
+                  <p class="event-card_avail">Tickets Available</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="USU CAREER DAYS"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">USU CAREER DAYS</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">AUG<br />15-16</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">USU Student Center</p>
+                    <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                  >
+                  <p class="event-card_avail">Tickets Available</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="AIESEC FUTURE LEADERS"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">AIESEC FUTURE LEADERS</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">OCT<br />26</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">Online & Offline</p>
+                    <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 185K</span
+                  >
+                  <p class="event-card_avail">Tickets Available</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Online Events -->
+    <div class="popular-container">
+      <section class="popular-events-section">
+        <h2 class="section-title">Online Events in USU</h2>
+        <div class="filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Today</button>
+          <button class="filter-btn">Tomorrow</button>
+          <button class="filter-btn">This Weekend</button>
+          <button class="filter-btn">Free</button>
+        </div>
+      </section>
+
+      <div class="event-row">
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="MEDAN Digifest"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">MEDAN Digifest</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">AUG<br />16-18</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">Pancasila Building</p>
+                    <p class="event-card__time">00:00 AM - 00:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 7,7K</span
+                  >
+                  <p class="event-card_unavail">Tickets Unavailable</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="JUNGFOOD EX-FEST"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">JUNGFOOD EX-FEST</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">OCT<br />21</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">
+                      In front of Soeratman Hall
+                    </p>
+                    <p class="event-card__time">08:00 AM - 03:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                  >
+                  <p class="event-card_avail">Tickets Available</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="USU CAREER DAYS"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">USU CAREER DAYS</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">AUG<br />15-16</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">USU Student Center</p>
+                    <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 0K</span
+                  >
+                  <p class="event-card_avail">Tickets Available</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            class="event-card__image"
+            src="/api/placeholder/400/300"
+            alt="AIESEC FUTURE LEADERS"
+          />
+          <div class="event-card__content">
+            <div class="event-card__container">
+              <h2 class="event-card__title">AIESEC FUTURE LEADERS</h2>
+              <div class="event-card__details">
+                <div class="event-card__info-grid">
+                  <div class="event-card__date-block">
+                    <p class="event-card__date">OCT<br />26</p>
+                  </div>
+                  <div class="event-card__location-block">
+                    <p class="event-card__location">Online & Offline</p>
+                    <p class="event-card__time">09:00 AM - 05:00 PM</p>
+                  </div>
+                </div>
+                <div class="event-card__price-block">
+                  <span class="event-card__price"
+                    ><i class="fa-solid fa-ticket"></i> IDR 185K</span
+                  >
+                  <p class="event-card_avail">Tickets Available</p>
+                </div>
+              </div>
+            </div>
+            <nav class="event-button-nav">
+              <ul>
+                <li>More</li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="help-banner">
+          <h3>Do you need help?</h3>
+          <a href="contact.html" class="consultation-btn">
+            Get consultation
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="footer-content">
+          <div class="info-section">
+            <h4>INFO</h4>
+            <ul class="footer-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/binarybite._/profilecard/?igsh=MTh4NzVwbXQ1b2kyOA=="
+                class="instagram"
+                >Instagram <i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://wa.me/6282167256663?text=Halo%20saya%20ingin%20bertanya%20"
+                class="whatsapp"
+              >
+                Whatsapp <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="#" class="x">X<i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="logo">.Eventease</div>
+            <div>+62 821 6725 6663</div>
+            <div>eventease@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="copyright">© 2024 — Copyright</div>
+      </div>
+    </footer>
+
+    <!-- Script Navbar -->
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+
+    <!-- Script Preloader-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+          const animationDuration = 700;
+          const lastLetterDelay = 700;
+          const totalDuration = animationDuration + lastLetterDelay;
+
+          setTimeout(() => {
+            const preloader = document.getElementById("preloader-wrapper");
+            preloader.classList.add("hide-preloader");
+
+            const mainContent = document.getElementById("main-content");
+            mainContent.classList.add("show-content");
+
+            setTimeout(() => {
+              preloader.style.display = "none";
+            }, 700);
+          }, totalDuration);
+        }, 700);
+      });
+    </script>
+
+    <!-- Script Menu Mobile -->
+    <script>
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const nav = document.querySelector("nav");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script>
+      const swiper = new Swiper(".eventSwiper", {
+        slidesPerView: 1, // Show one slide at a time
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        // Optional: Add pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Optional: Enable loop
+        loop: true,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 1,
+          },
+        },
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".eventSwiper", {
+          // Konfigurasi minimal
+          slidesPerView: 1,
+          spaceBetween: 10,
+        });
+      });
+    </script>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

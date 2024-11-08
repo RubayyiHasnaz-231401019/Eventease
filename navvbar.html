@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.Eventease</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Abhaya+Libre:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background: radial-gradient(circle at 80% 40%, #591234, #2a1a3e, #000000);
+      color: #e7e7e8;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      font-family: "Abhaya Libre", serif;
+      width: 750px;
+      font-weight: bolder;
+      color: #e7e7e8;
+    }
+
+    p {
+      color: #e7e7e8;
+      font-family: "poppins", sans-serif;
+      font-weight: 100;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: rgba(13, 13, 13, 0.95);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+
+    .logo {
+      font-family: "Shrikhand", sans-serif;
+      font-size: 28px;
+      color: #bf266f;
+      text-shadow: 0 0 15px rgba(191, 38, 111, 0.3);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #e7e7e8;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .navbar nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #e7e7e8;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      padding: 5px 0;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #bf266f;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .navbar ul li a:hover::after,
+    .navbar ul li a.active::after {
+      width: 100%;
+    }
+
+    .navbar .icons {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .navbar .icons a {
+      color: #e7e7e8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .navbar .icons a:hover {
+      color: #bf266f;
+    }
+
+    .navbar .icons button {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      color: #e7e7e8;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 500;
+      line-height: 1;
+      padding: 10px 15px;
+      position: relative;
+      transition: filter var(--motion-duration);
+      font-size: 14px;
+    }
+
+    .navbar .icons button:hover {
+      filter: brightness(1.1);
+    }
+
+    .navbar .icons button:active {
+      filter: brightness(0.9);
+    }
+
+    .navbar .icons button > span {
+      display: block;
+      position: relative;
+      transition: transform var(--motion-duration) var(--motion-ease);
+      z-index: 1;
+    }
+
+    .navbar .icons button:hover > span {
+      transform: scale(1.05);
+    }
+
+    .navbar .icons button:active > span {
+      transform: scale(0.95);
+    }
+
+    .navbar .icons button > svg {
+      fill: #bf266f;
+      position: absolute;
+      top: -5%;
+      left: -5%;
+      width: 110%;
+      height: 110%;
+    }
+
+    .navbar .icons button > svg > path {
+      transition: var(--motion-duration) var(--motion-ease);
+    }
+
+    .navbar .icons button:hover > svg > path {
+      d: path(
+        "M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0"
+      );
+    }
+
+    .navbar .icons button:active > svg > path {
+      d: path(
+        "M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0"
+      );
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 1024px) {
+      .navbar {
+        padding: 10px 20px;
+      }
+
+      .navbar nav {
+        gap: 20px;
+      }
+
+      .navbar .icons {
+        gap: 15px;
+      }
+    }
+
+    @media screen and (max-width: 891px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .navbar nav {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(13, 13, 13, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 40px 20px;
+        transition: left 0.3s ease;
+      }
+
+      .navbar nav.active {
+        left: 0;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .navbar ul li {
+        margin: 10px 0;
+      }
+
+      .navbar .icons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .navbar .icons a,
+      .navbar .icons button {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+      }
+    }
+  </style>
+  <body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+      <div class="logo">.Eventease</div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact & Feedback</a></li>
+        </ul>
+
+        <div class="icons">
+          <a href="createevent.html">Create Event</a>
+          <a href="tickets.html"><i class="fa-solid fa-ticket"></i> Tickets</a>
+          <a href="draft.html"><i class="fa-solid fa-folder"></i> Draft</a>
+          <a href="profilepage.html"
+            ><i class="fa-solid fa-user"></i> Profile</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- Script Menu Mobile -->
+    <script>
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const nav = document.querySelector("nav");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!-- Script Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
