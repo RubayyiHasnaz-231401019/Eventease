@@ -2,7 +2,7 @@
 session_start();
 include 'db.php';
 
-date_default_timezone_set('Asia/Jakarta'); // Sesuaikan dengan timezone lokal
+date_default_timezone_set('Asia/Jakarta'); 
 
 $otpMessage = '';
 $emailMessage = '';
@@ -40,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['otp_code']) && is_arra
     <title>Verify Email - EventEase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Modal styling */
         body {
             font-family: 'Poppins', sans-serif;
             background: radial-gradient(circle at 80% 40%, #591234, #2a1a3e, #000000);
@@ -122,7 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['otp_code']) && is_arra
     </style>
 </head>
 <body>
-    <!-- Modal Overlay -->
     <div class="modal-overlay" id="otpModal">
         <div class="modal-content">
             <div class="modal-header">Verify Your Email</div>
@@ -163,6 +161,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['otp_code']) && is_arra
             });
         });
     </script>
-
 </body>
 </html>

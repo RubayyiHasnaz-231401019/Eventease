@@ -1,19 +1,19 @@
 <?php
-include 'db.php'; 
 session_start();
+include 'db.php'; 
+
+require_once 'google-config.php';
 
 $email = "";
 $password = "";
 $email_error = "";
 $password_error = "";
 
-// Jika form dikirim (POST request)
+// Proses login form biasa
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Ambil data dari form menggunakan $_POST
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-    // Validasi input email dan password
     if (empty($email)) {
         $email_error = "Email is required!";
     }
@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password_error = "Password is required!";
     }
 
-    // Jika tidak ada error, lakukan pengecekan di database
     if (empty($email_error) && empty($password_error)) {
         $query = "SELECT * FROM users WHERE email = $1";
         $result = pg_query_params($conn, $query, array($email));
@@ -30,18 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($result && pg_num_rows($result) > 0) {
             $row = pg_fetch_assoc($result);
             if (password_verify($password, $row['password'])) {
-                // Login berhasil, simpan user_id ke dalam session
                 $_SESSION['id'] = $row['id'];
-                header("Location: index-2.html");
-                // Redirect ke halaman utama atau dashboard (uncomment jika ingin redirect)
-                // header("Location: dashboard.php");
+                header("Location: index-2.php");
                 exit();
             } else {
-                // Password salah
                 $password_error = "Incorrect password!";
             }
         } else {
-            // User tidak ditemukan
             $email_error = "User not found!";
         }
     }
@@ -74,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="right-side">
             <h2>Sign In</h2>
             <div class="button-container">
-                <a href="google.php" class="google-button">
+                <a href="<?php echo $client->createAuthUrl(); ?>" class="google-button">
                     <img src="images/google.png" alt="Google Logo">
                     Sign in with Google
                 </a>
@@ -89,7 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="input-group">
                         <label for="email">E-mail Address</label>
                         <input type="email" id="email" name="email" placeholder="Enter your e-mail" style="width: 91.5%;" value="<?= htmlspecialchars($email) ?>">
-                        <!-- Tampilkan pesan error di bawah input email -->
                         <?php if (!empty($email_error)): ?>
                             <div class="message" style="color: #721c24;"><?= htmlspecialchars($email_error) ?></div>
                         <?php endif; ?>
@@ -97,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="input-group">
                         <div class="label-container">
                             <label for="password">Password</label>
-                            <a href="request_reset.php" class="forgot-password" style="margin-right: 42px;">Forgot Password?</a>
+                            <a href="request.php" class="forgot-password" style="margin-right: 42px;">Forgot Password?</a>
                         </div>
                         <div class="password-container">
                             <input type="password" id="password" class="input-password" placeholder="Enter password" name="password" style="width: 91.5%;">
@@ -105,13 +98,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <i id="eye-icon" class="fas fa-eye" style="margin-right: 39px"></i>
                             </span>
                         </div>
-                        <!-- Tampilkan pesan error di bawah input password -->
                         <?php if (!empty($password_error)): ?>
                             <div class="message" style="color: #721c24;"><?= htmlspecialchars($password_error) ?></div>
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="buttons" style="gap: 200px; margin-top: 25px;">
+                <div class="buttons" style="gap: 180px; margin-top: 25px; margin-left:2px;">
                     <button type="button" class="back-button">Back</button>
                     <button type="submit" class="login-button" style="width: 115px;">Sign In</button>
                 </div>

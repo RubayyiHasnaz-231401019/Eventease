@@ -74,14 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="right-side">
             <h2>Reset Password</h2>    
-            <form action="request_reset.php" method="POST">
+            <form action="request.php" method="POST">
                 <div class="input" style="margin-left: 22px;">
                     <div class="input-group" style="width: 100%; margin-left: 18px">
                         <label for="email">E-mail Address</label>
                         <input type="email" id="email" name="email" placeholder="Enter your e-mail" style="width: 88%;" required>
                     </div>                   
                 </div>
-                <div class="buttons" style="gap: 200px; margin-top: 25px;">
+                <div class="buttons" style="gap: 180px; margin-top: 25px; margin-left: 2px;">
                     <button type="button" class="back-button" onclick="window.location.href='login.php';">Back</button>
                     <button type="submit" class="login-button" style="width: 115px;">Send Reset</button>
                 </div>

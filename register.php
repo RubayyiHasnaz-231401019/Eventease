@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include 'db.php';
-require 'vendor/autoload.php';
+require_once 'google-config.php';
 
 date_default_timezone_set('Asia/Jakarta'); 
 
@@ -10,6 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 
 $emailMessage = '';
 $passwordMessage = '';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['fullname']);
@@ -48,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'khairnnisasrg08@gmail.com';
-                    $mail->Password = 'rhfarvrokohnvmoh';
+                    $mail->Username = 'noreply.eventease@gmail.com';
+                    $mail->Password = 'iqybtttrbvjeuxvb';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
@@ -101,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="right-side">
             <h2>Sign Up</h2>
             <div class="button-container">
-                <a href="google.php" class="google-button">
+                <a href="<?= $client->createAuthUrl(); ?>" class="google-button">
                     <img src="images/google.png" alt="Google Logo">
                     Sign up with Google
                 </a>
@@ -134,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>                    
                 </div>
                 <div class="buttons">
-                    <button type="submit" class="create-button">Sign Up</button>
+                    <button type="submit" class="create-button" style="margin-left: 4px;">Sign Up</button>
                 </div>
                 <p class="create-account">Already have an account? <a href="login.php">Sign In</a></p>
             </form>
