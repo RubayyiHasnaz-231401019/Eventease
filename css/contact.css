@@ -229,6 +229,12 @@ p {
   white-space: nowrap;
 }
 
+.navbar,
+.navbar ul li a {
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .navbar ul li a::after {
   content: "";
   position: absolute;
@@ -326,7 +332,6 @@ p {
   );
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 1024px) {
   .navbar {
     padding: 10px 20px;
