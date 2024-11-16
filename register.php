@@ -11,6 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 $emailMessage = '';
 $passwordMessage = '';
 
+$config = include('email-config.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['fullname']);
@@ -47,19 +48,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail = new PHPMailer(true);
                 try {
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.gmail.com';
+                    $mail->Host = $config['SMTP_HOST'];
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'khairnnisasrg08@gmail.com'; 
-                    $mail->Password = 'rhfarvrokohnvmoh'; 
+                    $mail->Username = $config['SMTP_USERNAME'];
+                    $mail->Password = $config['SMTP_PASSWORD'];
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                    $mail->Port = 587;
-
+                    $mail->Port = $config['SMTP_PORT'];
+                    // Set pengirim dan penerima
                     $mail->setFrom('no-reply@eventease.com', 'EventEase.com');
                     $mail->addAddress($email);
+                    // Isi email
                     $mail->isHTML(true);
                     $mail->Subject = 'Email Verification Code';
                     $mail->Body = "Your email verification code is: <strong>{$otp_code}</strong>";
-
+                    // Kirim email
                     $mail->send();
                     echo "<script>alert('Registration successful! Please check your email for the verification code.'); window.location.href = 'verify.php?email={$email}';</script>";
                 } catch (Exception $e) {
