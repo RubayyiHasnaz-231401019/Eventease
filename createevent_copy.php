@@ -1,81 +1,43 @@
 <?php
-include 'db.php';
+session_start();
 
-// Ambil data dari form, gunakan nilai kosong jika data tidak ada
-$nama_event = $_POST['nama_event'] ?? '';
-$event_category = $_POST['event_category'] ?? '';
-$hostname = $_POST['hostName'] ?? '';
-$host_telp = $_POST['hostWhatsapp'] ?? '';
-$event_type = $_POST['event_type'] ?? '';
-$start_date = $_POST['start_date'] ?? '';
-$start_time_first = $_POST['start_time_first'] ?? '';
-$end_time_first = $_POST['end_time_first'] ?? '';
-$end_date = $_POST['end_date'] ?? '';
-if ($event_type== "single" ){
-  $end_date = $start_date;
-}
-$location_type = $_POST['location_type'] ?? '';
-$address = $_POST['address'] ?? '';
-$gmaps_link = $_POST['gmaps_link'] ?? '';
-$online_link = $_POST['online_link'] ?? '';
-$description = $_POST['description'] ?? '';
+if (isset($_POST['kirim'])) {
+    $_SESSION['form_data'] = [
+        'nama_event' => $_POST['nama_event'] ?? '',
+        'event_category' => $_POST['event_category'] ?? '',
+        'hostName' => $_POST['hostName'] ?? '',
+        'hostWhatsapp' => $_POST['hostWhatsapp'] ?? '',
+        'event_type' => $_POST['event_type'] ?? '',
+        'start_date' => $_POST['start_date'] ?? '',
+        'start_time_first' => $_POST['start_time_first'] ?? '',
+        'end_time_first' => $_POST['end_time_first'] ?? '',
+        'end_date' => ($_POST['event_type'] === 'single') ? $_POST['start_date'] : ($_POST['end_date'] ?? ''),
+        'location_type' => $_POST['location_type'] ?? '',
+        'address' => $_POST['address'] ?? '',
+        'gmaps_link' => $_POST['gmaps_link'] ?? '',
+        'online_link' => $_POST['online_link'] ?? '',
+        'description' => $_POST['description'] ?? '',
+    ];
 
-// echo"$start_date - $start_time_first - $end_time_first";
+    // Jika ada file yang diunggah, simpan di sesi
+    if (isset($_FILES['hostprofile']) && $_FILES['hostprofile']['size'] !== 0) {
+        $file_name = $_FILES['hostprofile']["name"];
+        $ekstensi = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        $file_name = uniqid() . "." . $ekstensi;
+        $target_file = "./uploads/" . $file_name;
 
-
-if (isset($_FILES['hostprofile']) && $_FILES['hostprofile']['size'] !== 0) {
-    $file_name = $_FILES['hostprofile']["name"];
-    $ekstensi = strtolower(end(explode(".", $file_name)));
-    $file_name = uniqid() . "." . $ekstensi;
-    $target_file = "./uploads/" . $file_name;
-
-    if (move_uploaded_file($_FILES["hostprofile"]["tmp_name"], $target_file)) {
-        $hostprofile = $file_name;
-    } else {
-        $messagehostprofile = "GAGAL DIUNGGAH";
+        if (move_uploaded_file($_FILES["hostprofile"]["tmp_name"], $target_file)) {
+            $_SESSION['form_data']['hostprofile'] = $file_name;
+        } else {
+            $_SESSION['form_data']['hostprofile'] = null;
+        }
     }
-} else {
-  $messagehostprofile = "GAGAL DIUNGGAH";
+
+    // Redirect ke halaman berikutnya
+    header("Location: indeks-banner_copy.php");
+    exit;
 }
-
-$sql = "INSERT INTO tabel_event (
-  nama_event, event_category, hostprofile, hostname, 
-  host_telp, event_type, start_date, start_time_first, end_time_first, end_date,  location_type, address, gmaps_link, online_link, description
-) VALUES (
-  '$nama_event', '$event_category', '$hostprofile', '$hostname', '$host_telp', '$event_type', '$start_date', '$start_time_first', '$end_time_first', '$end_date', '$location_type','$address', '$gmaps_link', '$online_link', '$description'
-)";
-
-// echo($sql);
-
-if (isset($_POST['kirim'])){
-  $result = pg_query($conn, $sql);
-  $ambil_id = "SELECT event_id FROM tabel_event order by event_id DESC LIMIT 1";
-  $result = pg_query($conn, $ambil_id);
-  while ($row = pg_fetch_row($result)) {
-    $event_id = $row[0];
-  }
-
-  $_SESSION['event_id'] = $event_id;
-  // $_SESSION['nama_event'] = $nama_event;
-  // $_SESSION['hostName'] = $hostname;
-  // $_SESSION['hostWhatsapp'] = $host_telp;
-  // $_SESSION['hostprofile'] = $hostprofile;
-  // $_SESSION['event_type'] = $event_type;
-  // $_SESSION['start_date'] = $start_date;
-  // $_SESSION['start_time_first'] = $start_time_first;
-  // $_SESSION['end_time_first'] = $end_time_first;
-  // $_SESSION['end_date'] = $end_date;
-  // $_SESSION['location_type'] = $location_type;
-  // $_SESSION['address'] = $address;
-  // $_SESSION['gmaps_link'] = $gmaps_link;
-  // $_SESSION['online_link'] = $online_link;
-  // $_SESSION['description'] = $description;
-
-  header("Location: indeks-banner_copy.php");
-}
-pg_close($conn);
 ?>
-
 
 
 <!DOCTYPE html>
