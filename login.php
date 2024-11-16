@@ -103,9 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="buttons" style="gap: 180px; margin-top: 25px; margin-left:2px;">
-                    <button type="button" class="back-button">Back</button>
-                    <button type="submit" class="login-button" style="width: 115px;">Sign In</button>
+                <div class="buttons">
+                    <button type="submit" class="login-button">Sign In</button>
                 </div>
                 <p class="login-account">Don't have an account? <a href="register.php">Create Account</a></p>
             </form>
