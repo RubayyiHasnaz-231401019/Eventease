@@ -1,41 +1,43 @@
 <?php
-
 include 'db.php';
+
 session_start();
 
-// $query = "SELECT * FROM users WHERE id = $1";
-// $result = pg_query_params($conn, $query, array($user_id));
-// $user = pg_fetch_assoc($result);
-
-$banner_event = $_POST['banner_event'] ?? '';
-
-if (isset($_FILES['banner_event']) && $_FILES['banner_event']['size'] !== 0) {
-  $file_name = $_FILES['banner_event']["name"];
-  $ekstensi = strtolower(end(explode(".", $file_name)));
-  $file_name = uniqid() . "." . $ekstensi;
-  $target_file = "./uploads/" . $file_name;
-
-  if (move_uploaded_file($_FILES["banner_event"]["tmp_name"], $target_file)) {
-      $banner_event = $file_name;
-  } else {
-      $messagebanner_event = "GAGAL DIUNGGAH";
-  }
-} else {
-    $messagebanner_event = "GAGAL DIUNGGAH";
+$event_id = $_SESSION['event_id'] ?? null;
+if (!$event_id) {
+    die("Event ID tidak ditemukan.");
 }
 
+if (isset($_FILES['foto_banner']) && $_FILES['foto_banner']['size'] !== 0) {
+    $file_name = $_FILES['foto_banner']["name"];
+    $ekstensi = strtolower(end(explode(".", $file_name)));
+    $file_name = uniqid() . "." . $ekstensi;
+    $target_file = "./uploads/" . $file_name;
 
-
-if(isset($_POST['kirim'])){
-  $event_id = $_SESSION['event_id'];
-  // $sql = "INSERT INTO foto_banner(event_id, banner_event) values('$event_id', '$banner_event')"; //punya pak andrian
-  $sql = "UPDATE tabel_event SET foto_banner = '$banner_event'";
-  $result = pg_query($conn, $sql);
-  header("location:indeks-ticketin_copy.php");
+    if (move_uploaded_file($_FILES["foto_banner"]["tmp_name"], $target_file)) {
+        $foto_banner = $file_name;
+    }
 }
+
+if (isset($_POST['kirim'])) {
+    // $sql = "UPDATE tabel_event 
+    //         SET foto_banner = '$foto_banner'";
+
+    $sql = "UPDATE tabel_event 
+    SET foto_banner = '$foto_banner'
+    WHERE event_id = '$event_id'";
+
+    $result = pg_query($conn, $sql);
+    if ($result) {
+        header("Location: indeks-ticketin_copy.php");
+    } else {
+        echo "Gagal memperbarui data.";
+    }
+  echo "$sql";
+}
+
 pg_close($conn);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,15 +136,6 @@ pg_close($conn);
 
     <section class="upload-container">
       <form action="indeks-banner_copy.php" method="POST" enctype="multipart/form-data">
-        <?php   
-          include 'db.php';
-          $ambil_id = "SELECT * FROM tabel_event order by event_id DESC LIMIT 1";
-          $result = pg_query($conn, $ambil_id);
-          
-          while ($row = pg_fetch_row($result)) {
-            echo"<input type='hidden' name='event_id' value='$row[0]'> ";
-          }
-        ?>
         <div class="upload-container">
             <h2 class="text-2xl font-medium">Upload Image<span style="color: red">*</span></h2>
             <div class="upload-box" id="upload-box">
@@ -150,7 +143,7 @@ pg_close($conn);
             </div>
             <div class="file-input">
                 <label for="file-upload">Choose File</label>
-                <input id="file-upload" type="file" accept="image/*" onchange="previewImage(event)" name="banner_event" required/>
+                <input id="file-upload" type="file" accept="image/*" onchange="previewImage(event)" name="foto_banner" required/>
                 <span id="file-name">No file chosen</span>
             </div>
             <div class="file-formats">
@@ -159,7 +152,7 @@ pg_close($conn);
         </div>
 
         <div class="buttons"style="margin-bottom: 20px;">
-          <a href="createevent.html"> Go back </a>
+          <a href="createevent_copy.php"> Go back </a>
           <button name="kirim" type="submit"> Save & Continue </button>
         </div>
       </form>
