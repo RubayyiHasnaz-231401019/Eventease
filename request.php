@@ -5,6 +5,8 @@ require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+$config = include('email-config.php');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
 
@@ -24,20 +26,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         try {
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com'; 
+            $mail->Host = $config['SMTP_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'khairnnisasrg08@gmail.com'; 
-            $mail->Password = 'rhfarvrokohnvmoh'; 
+            $mail->Username = $config['SMTP_USERNAME'];
+            $mail->Password = $config['SMTP_PASSWORD'];
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
-            
+            $mail->Port = $config['SMTP_PORT'];
+            // Set pengirim dan penerima
             $mail->setFrom('no-reply@eventease.com', 'EventEase.com');
             $mail->addAddress($email);
-
+            // Isi email
             $mail->isHTML(true);
             $mail->Subject = 'Reset Your Password';
             $mail->Body = "Click this link to reset your password: <a href='$reset_link'>$reset_link</a>";
-
+            // Kirim email
             $mail->send();
             echo " <script>alert('Reset password link has been sent to your email!');</script>";
         } catch (Exception $e) {
