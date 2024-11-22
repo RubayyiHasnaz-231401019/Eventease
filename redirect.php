@@ -40,7 +40,7 @@ if (isset($_GET['code'])) {
             }
         }
 
-        header('Location: index-2.php'); 
+        header('Location: home2.php'); 
         exit();
     } else {
         echo "Token Error: " . $token['error'];

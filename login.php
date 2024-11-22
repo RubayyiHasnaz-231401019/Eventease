@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $row = pg_fetch_assoc($result);
             if (password_verify($password, $row['password'])) {
                 $_SESSION['id'] = $row['id'];
-                header("Location: index-2.php");
+                header("Location: home2.php");
                 exit();
             } else {
                 $password_error = "Incorrect password!";
