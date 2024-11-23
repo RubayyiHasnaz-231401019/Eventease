@@ -67,7 +67,7 @@
       <h1>Contact Us</h1>
 
       <div class="contact-grid">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" method="POST" action="process_contact.php">
           <div class="form-group">
             <label for="fullName">Full Name</label>
             <input type="text" id="fullName" required />
@@ -121,7 +121,7 @@
     <div class="feedback-modal" id="feedbackModal">
       <button class="close-modal" id="closeModal">✕</button>
       <h2>Send Feedback</h2>
-      <form class="contact-form" id="feedbackForm">
+      <form class="contact-form" id="feedbackForm" method="POST" action="process_feedback.php">>
         <div class="form-group">
           <label for="feedbackType">Type of Feedback</label>
           <select id="feedbackType" required>
