@@ -78,8 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </span>
                     </div>                    
                 </div>
-                <div class="buttons" style="justify-content: end; margin-top: 25px; margin-right: 43px;">
-                    <button type="submit" class="login-button" style="width: 115px;">Reset</button>
+                <div class="buttons">
+                    <button type="submit" class="create-button" style="margin-right: 17px; width: 418px;">Reset</button>
                 </div>
             </form>
         </div>

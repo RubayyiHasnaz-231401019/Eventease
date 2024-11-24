@@ -112,27 +112,8 @@
       </div>
 
       <!-- Gallery Section -->
-      <div class="gallery-container">
-        <div class="photo-card">
-          <img src="img/Universitas Sumatera Utara.jpg" alt="" />
-        </div>
-        <div class="photo-card">
-          <img src="img/gelanggang.jpg" alt="" />
-        </div>
-        <div class="photo-card"><img src="img/feb.jpg" alt="" /></div>
-        <div class="photo-card">
-          <img
-            src="img/Daftar Besaran UKT USU 2024 Program S1-D4, Maba Wajib Catat!.jpg"
-            alt=""
-          />
-        </div>
-        <div class="photo-card"><img src="img/GP.jpg" alt="" /></div>
-        <div class="photo-card">
-          <img src="img/Perpustakaan Universitas Sumatera Utara.jpg" alt="" />
-        </div>
-        <div class="photo-card">
-          <img src="img/PKKMB USU.jpg" alt="" />
-        </div>
+      <div class="gallery">
+        <img src="img/Hero Images (2).png" alt="" />
       </div>
     </div>
 
@@ -400,7 +381,7 @@
                   />
                   <div class="event-card__content">
                     <div class="event-card__container">
-                      <h2 class="event-card__title">Market Preneur</h2>
+                      <h2 class="event-card__title">Market Preneur   </h2>
                       <div class="event-card__details">
                         <div class="event-card__info-grid">
                           <div class="event-card__date-block">
@@ -1129,22 +1110,18 @@
     <!-- Swiper JS -->
     <script>
       const swiper = new Swiper(".eventSwiper", {
-        slidesPerView: 1, // Show one slide at a time
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        // Optional: Add pagination
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-        // Optional: Enable loop
         loop: true,
-        // Responsive breakpoints
         breakpoints: {
-          // when window width is >= 768px
           768: {
             slidesPerView: 1,
           },
@@ -1155,7 +1132,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const swiper = new Swiper(".eventSwiper", {
-          // Konfigurasi minimal
           slidesPerView: 1,
           spaceBetween: 10,
         });

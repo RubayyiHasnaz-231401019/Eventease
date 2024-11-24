@@ -1,4 +1,3 @@
-
 .header {
   text-align: center;
   padding-top: 90px;
@@ -780,4 +779,639 @@ UNTUK POP UP
       flex-direction: column;
       align-items: flex-start;
   }
+=======
+
+.header {
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    width:100%;
+    color: white;
+    font-size: 48px;
+}
+.header h1 {
+    font-size: 48px;
+    margin: 0; 
+}
+
+.content p{
+    color:black;
+}
+
+.content {
+    background-color: #fff;
+    color: #000 ;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+.event-image {
+    max-width: 500px;  /* Batasi lebar maksimal gambar */
+    width: 100%;       /* Gambar akan menyesuaikan dengan ukuran elemen induknya */
+    height: auto;      /* Menjaga rasio asli gambar */
+    display: block;    /* Agar elemen gambar bisa diposisikan dengan margin */
+    margin: 20px auto; /* Memusatkan gambar secara horizontal */
+    border-radius: 10px; /* Opsional: tambahkan border melengkung */
+}
+
+.content h2 {
+    font-size: 33px; 
+    margin-top: 0;
+    text-align: center;
+}
+.content .section {
+    margin-bottom: 20px;
+}
+.content .section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.content .section p {
+    margin: 5px 0;
+}
+.content .section .add-to-calendar {
+    color: #9B034C;
+    cursor: pointer;
+}
+
+.add-to-calendar a {
+    color: #9B034C; /* Mengubah warna teks menjadi hitam */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.add-to-calendar a:hover {
+    color: #BF266F;/* Opsional: mengubah warna saat hover */
+}
+
+.buy-tickets-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #BF266F, #591234);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.buy-tickets-btn img{
+    width: 20px;
+    margin-right: 8px;
+  }
+
+.content .sectionPrice p {
+    font-weight: medium;
+    color: black;
+}
+
+.content .map {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+}
+.content .sectionMap h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.content .sectionMap p {
+    margin: 5px 0;
+}
+.sectionMap iframe {
+    width: 850px; /* Lebar iframe */
+    height: 300px; /* Tinggi iframe */
+    border: 0; /* Menghapus border */
+    display: block; /* Mengubah elemen menjadi block agar margin auto berfungsi */
+    margin: 0 auto; /* Mengatur margin otomatis untuk menempatkan iframe di tengah */
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.hosted-by {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-bottom: 20px; /* Jarak di bawah bagian host */
+}
+.hosted-by img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 20px;
+}
+.hosted-by .host-info {
+    display: flex;
+    flex-direction: column;
+}
+.hosted-by .host-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.hosted-by .host-info .buttons {
+    margin-top: 10px;
+}
+.hosted-by .host-info .buttons button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hosted-by .host-info .buttons .follow {
+    background-color: #BF266F;
+    color: white;
+    border: none;
+}
+/* Styling default tombol "Follow" */
+.hosted-by .host-info .buttons .follow {
+    background-color: #BF266F;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Styling saat menjadi "Unfollow" */
+.hosted-by .host-info .buttons .unfollow {
+    background-color: white;
+    color: #BF266F;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+
+.event-description {
+    margin-bottom: 20px;
+}
+.event-description p {
+    text-align: justify; /* Menyelaraskan teks rata kanan-kiri */
+    line-height: 1.6;   /* Mengatur tinggi baris untuk keterbacaan */
+    margin: 0 0 15px;   /* Mengatur margin bawah untuk spasi antar paragraf */
+}
+
+/* Jika ingin menambahkan style untuk heading */
+
+/* Mengatur tampilan link di paragraf dengan class 'regist' */
+.event-description .regist a {
+    color: white;          /* Warna teks link putih */
+    text-decoration: none; /* Menghilangkan underline */
+}
+
+/* Mengubah warna saat hover menjadi biru */
+.event-description .regist a:hover {
+    color: #BF266F; /* Mengubah warna menjadi biru saat di-hover */
+}
+
+
+.other-events {
+    margin-top: 55px;
+}
+.other-events h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: space-between; /* Space between the cards */
+    flex-wrap: wrap; /* Allow cards to wrap if the screen is too small */
+}
+
+.event-card {
+    width: 30%; /* Set width to 30% for three cards in a row */
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-bottom: 27px; /* Added margin for vertical spacing */
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 10px;
+}
+
+.event-info .date {
+    color: #BF266F;
+    font-weight: bold;
+}
+
+.event-info .title {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #2D2C3C; /* Warna teks judul */
+    text-align: center;
+}
+
+.event-info .title a {
+    color: black; /* Mengatur warna teks tautan menjadi hitam */
+    text-decoration: none; /* Menghilangkan underline pada tautan */
+}
+
+.event-info .title a:hover {
+    text-decoration: underline; /* Tambahkan efek saat tautan dihover jika diinginkan */
+}
+
+.event-info .venue {
+    font-size: 0.9em; /* Ukuran font untuk tempat */
+    color: #666; /* Warna abu-abu */
+    margin-bottom: 5px; /* Jarak antara venue dan waktu */
+}
+
+.event-info .time {
+    font-size: 0.9em; /* Ukuran yang sama dengan venue */
+    color: #666; /* Warna abu-abu */
+    margin-bottom: 10px; /* Jarak sebelum bagian detail */
+}
+
+.event-info .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.event-info .details .price {
+    font-weight: bold;
+    color: #FFD700; /* Warna kuning */
+}
+
+.event-info .details .availability {
+    font-weight: bold;
+    transition: color 0.3s; /* Transition effect for color change */
+}
+
+/* Jika status adalah 'Tickets available' */
+.event-info .details .availability.available {
+    color: #3CB371; /* Warna hijau */
+}
+
+/* Jika status adalah 'Tickets unavailable' */
+.event-info .details .availability.unavailable {
+    color: #555555; /* Warna abu-abu */
+}
+
+/* ==================================
+UNTUK POP UP
+================================== */
+
+* {
+    --background-color:#f1f3f6 ;
+    --second--color: #bf266f;
+    --gradasi-color: linear-gradient(to right, #bf266f, #591234);
+   
+  }
+  .titleModalAdaBack{
+    width: 200px;
+    transform: translateY(5px);
+  }
+  .titleModalAdaBack h3{
+    padding-inline: 10px;
+  }
+  .titleModalAdaBack h1{
+    color: #000;
+    width: 200px;
+    padding-left: 10px;
+  }
+  #staticBackdropLabel {
+    color: black;
+  }
+  
+  .modal .modal-body{
+    background-color: var(--background-color);
+  }
+  .modal .desc{
+    color: white;
+  }
+  .modal .tiket_quantity p{
+    font-weight: 600;
+  }
+  .modal .titleAdaBack h3{
+    padding-right: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+    width: 100px;
+  }
+  .titleAdaBack h1{
+    /* text-align: center; */
+    width: 200px;
+    font-size: 25px;
+    margin: 0;
+  }
+  .titleAdaBack{
+    justify-items: center;
+    width: 300px;
+  }
+  
+  .modal .event_desc{
+    padding: 30px 50px 50px 50px; /*atas kanan bawah kiri  */
+    background-color: white;
+    color: black;
+  }
+  
+  .modal .bi-arrow-left{
+    justify-items: center;
+  }
+  
+  .modal .bi-arrow-right{
+    padding-left: 10px;
+    align-self: baseline;
+  }
+  .modal .modal-body p{
+    margin: 0;
+    align-items: center;
+    font-weight: 300;
+  }
+  
+  .modal .col-warna{
+    max-width: 10px;
+    padding: 0;
+    background: linear-gradient(#bf266f, #591234);
+  }
+  .totalSemen{
+    width: 300px;
+    justify-content: center;
+    /* display: block; */
+  }  
+  .totalSemen h3{
+    padding-inline: 12px ;
+    font-size: 20px;
+  }
+  .modal .quantity{
+    max-width: 150px;
+    align-items: center;
+    border-top: 1px solid #e4e6e8;
+    border-bottom: 1px solid #e4e6e8;
+  }
+  .modal .nama-tic-col{
+    align-content: center;
+    border-bottom: 1px solid #e4e6e8;
+    border-top: 1px solid #e4e6e8;
+  }
+  
+  .modal .nama-tic-col h3{
+    font-size: 20px;
+  }
+  .modal .nama-tic-col p{
+    font-weight: 460;
+  }
+  .modal .jenis-tic{
+    height: 80px;
+    background-color: white;
+    padding: 0;
+    margin: 0px -16.3px 20px;
+  }
+  
+  .modal .btn-proses{
+    background: linear-gradient(to right, #bf266f,#591234);
+    border: none;
+    border-radius: .2rem;
+    width: 450px;
+    height: 45px;
+    color: white;
+  
+  }
+  
+  .modal #quantity{
+    width: 50px;
+    /* background: transparent; */
+    font-size: 25px;
+    text-align: center;
+    border: none;
+  }
+  .modal .standard-ticket{
+    padding-left: 15px;
+    padding-top: 8px;
+  }
+  .modal .attendee-des{
+    border: 1px solid #e4e6e8;
+    border-top: 0;
+    padding: 15px 10px;
+    background-color: white;
+    width: 440px;
+    justify-self: center;
+  }
+  
+  .modal .telp-form select, input{
+    border: none;
+  }
+  .modal .telp-form select{
+    width: 50px;
+  }
+  .modal .telp-form input{
+    padding-left: 10px;
+    width: 100%;
+  }
+  
+  .accept-terms{
+    text-align: center;
+    font-size: 13px;
+    padding-top: 16px;
+  }
+  .modal .form-group{
+    padding-bottom: 10px;
+  }
+  .modal .form-label{
+    margin: 0;
+    font-weight: 400;
+  }
+  .modal .form-group .form-control{
+    border: 1px solid #828282bf;
+  }
+  
+  .modal span{
+    color: #bf266f;
+  }
+  
+  .modal p img{
+    width: 15px;
+  }
+  
+  /* INI UNTUK GAMBAR TIKCET DI SUMMARY ORDER */
+  .modal .ticket h1{
+    font-size: 25px;
+    color: #9B034C;
+    text-align: center;
+  }
+  .modal .ticket h3{
+    font-size: 15px;
+  }
+  
+  .modal .warna-summary{
+    background: linear-gradient(to right, #bf266f, #591234);
+    height: 3px;
+    width: 440px;
+    justify-self: center;
+  }
+  
+  .modal #payment3 .modal-body{
+    justify-items: center;
+  }
+  
+  
+  .ticket {
+    padding-inline: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 440px;
+    padding-block: 20px;
+    position: relative;
+    justify-self: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  .ticket h1{
+    width: 200px;
+    justify-self: center;
+    margin-bottom: 15px;
+  }
+  
+  .ticket::before,
+  .ticket::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f3f6;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .modal .ticket::before {
+    left: -23px;
+  }
+  
+  .modal .ticket::after {
+    right: -23px;
+  }
+  
+  .modal .harga-email{
+    align-items: center;
+  }
+  .modal .harga-email h3{
+    margin: 0;
+  }
+  .modal .ticket-price {
+    background: linear-gradient(to right, #bf266f, #591234);
+    color: white;
+    font-weight: 500;
+    padding: 8px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    vertical-align: middle;
+    height: 35px;
+  }
+  
+  .modal .footer-payment3 h3{
+    margin-bottom:0px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .modal .footer-payment3 h2{
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .modal .footer-payment3, .footer-payment3-total,.footer-payment3-tax{
+    width: 300px;
+    display: block;
+  }
+  .modal .modal-footer{
+    justify-content:center;
+  }
+  .modal .footer-payment3-total h3{
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .modal .footer-payment3-total h2{
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 650;
+  }
+  .modal .footer-payment3-tax h3{
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .modal .footer-payment3-tax h2{
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .modal .footer-payment3-tax{
+    border-bottom: 1px solid gray;
+  }
+  .modal .lock{
+    width: 15px;
+    padding-bottom: 3px;
+    margin-right: 7px;
+  }
+
+  .statusPayment{
+    background: #BF266F;
+    color: white;
+    justify-items: center;
+    border-radius: 2rem;
+    padding-block: 18px;
+    margin-inline: 25px;
+    margin-block: 10px;
+  }
+
+  .statusPayment h1{
+    width: 400px;
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+    color: white;
+  }
+  .statusPayment img{
+    width: 200px;
+  }
+/* ================================== */
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .content h1 {
+        font-size: 1rem;
+        color: black ;
+    }
+
+    .category {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
